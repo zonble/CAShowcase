@@ -1,6 +1,6 @@
 #import "RootViewController.h"
 #import "ZBBananaViewController.h"
-
+#import "ZBTransitionViewController.h"
 
 @implementation RootViewController
 
@@ -31,7 +31,7 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
 {
-    return 1;
+    return 2;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
@@ -46,6 +46,9 @@
 		case 0:
 			cell.textLabel.text = @"Basic Animation";
 			break;
+		case 1:
+			cell.textLabel.text = @"Transitions";
+			break;			
 		default:
 			break;
 	}
@@ -63,6 +66,11 @@
 		case 0:
 		{
 			controller = [[ZBBananaViewController alloc] init];
+		}
+			break;
+		case 1:
+		{
+			controller = [[ZBTransitionViewController alloc] init];
 		}
 			break;
 		default:
@@ -84,4 +92,5 @@
 }
 
 @end
+
 

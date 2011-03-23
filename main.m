@@ -1,6 +1,5 @@
 #import <UIKit/UIKit.h>
-
-@class CAShowcaseAppDelegate;
+#import "CAShowcaseAppDelegate.h"
 
 int main(int argc, char *argv[]) {
     

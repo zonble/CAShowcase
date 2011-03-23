@@ -24,6 +24,14 @@
 		D447B0A7133A5F71007CB4EC /* banana7.tiff in Resources */ = {isa = PBXBuildFile; fileRef = D447B09F133A5F71007CB4EC /* banana7.tiff */; };
 		D447B0A8133A5F71007CB4EC /* banana8.tiff in Resources */ = {isa = PBXBuildFile; fileRef = D447B0A0133A5F71007CB4EC /* banana8.tiff */; };
 		D447B0AC133A5F8A007CB4EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D447B0AB133A5F8A007CB4EC /* QuartzCore.framework */; };
+		D447B0E6133A61F6007CB4EC /* ZBTransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D447B0E5133A61F6007CB4EC /* ZBTransitionViewController.m */; };
+		D447B0F0133A64CE007CB4EC /* ZBTransitionTypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D447B0EF133A64CE007CB4EC /* ZBTransitionTypeController.m */; };
+		D447B14A133A696F007CB4EC /* bike1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D447B145133A696F007CB4EC /* bike1.jpg */; };
+		D447B14B133A696F007CB4EC /* bike2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D447B146133A696F007CB4EC /* bike2.jpg */; };
+		D447B14C133A696F007CB4EC /* bike3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D447B147133A696F007CB4EC /* bike3.jpg */; };
+		D447B14D133A696F007CB4EC /* bike4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D447B148133A696F007CB4EC /* bike4.jpg */; };
+		D447B14E133A696F007CB4EC /* bike5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D447B149133A696F007CB4EC /* bike5.jpg */; };
+		D447B1A4133A6C97007CB4EC /* ZBTransitionSubtypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D447B1A3133A6C97007CB4EC /* ZBTransitionSubtypeController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +59,17 @@
 		D447B09F133A5F71007CB4EC /* banana7.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = banana7.tiff; sourceTree = "<group>"; };
 		D447B0A0133A5F71007CB4EC /* banana8.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = banana8.tiff; sourceTree = "<group>"; };
 		D447B0AB133A5F8A007CB4EC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D447B0E4133A61F6007CB4EC /* ZBTransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBTransitionViewController.h; sourceTree = "<group>"; };
+		D447B0E5133A61F6007CB4EC /* ZBTransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBTransitionViewController.m; sourceTree = "<group>"; };
+		D447B0EE133A64CE007CB4EC /* ZBTransitionTypeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBTransitionTypeController.h; sourceTree = "<group>"; };
+		D447B0EF133A64CE007CB4EC /* ZBTransitionTypeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBTransitionTypeController.m; sourceTree = "<group>"; };
+		D447B145133A696F007CB4EC /* bike1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bike1.jpg; sourceTree = "<group>"; };
+		D447B146133A696F007CB4EC /* bike2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bike2.jpg; sourceTree = "<group>"; };
+		D447B147133A696F007CB4EC /* bike3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bike3.jpg; sourceTree = "<group>"; };
+		D447B148133A696F007CB4EC /* bike4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bike4.jpg; sourceTree = "<group>"; };
+		D447B149133A696F007CB4EC /* bike5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bike5.jpg; sourceTree = "<group>"; };
+		D447B1A2133A6C97007CB4EC /* ZBTransitionSubtypeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBTransitionSubtypeController.h; sourceTree = "<group>"; };
+		D447B1A3133A6C97007CB4EC /* ZBTransitionSubtypeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBTransitionSubtypeController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +90,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D447B0E1133A61D6007CB4EC /* Transition */,
 				D447B084133A5F59007CB4EC /* Banana */,
 				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
 				28C286E00D94DF7D0034E888 /* RootViewController.m */,
@@ -143,6 +163,7 @@
 		D447B097133A5F71007CB4EC /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D447B144133A696F007CB4EC /* Bike */,
 				D447B098133A5F71007CB4EC /* Banana */,
 			);
 			path = Images;
@@ -161,6 +182,31 @@
 				D447B0A0133A5F71007CB4EC /* banana8.tiff */,
 			);
 			path = Banana;
+			sourceTree = "<group>";
+		};
+		D447B0E1133A61D6007CB4EC /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				D447B0E4133A61F6007CB4EC /* ZBTransitionViewController.h */,
+				D447B0E5133A61F6007CB4EC /* ZBTransitionViewController.m */,
+				D447B0EE133A64CE007CB4EC /* ZBTransitionTypeController.h */,
+				D447B0EF133A64CE007CB4EC /* ZBTransitionTypeController.m */,
+				D447B1A2133A6C97007CB4EC /* ZBTransitionSubtypeController.h */,
+				D447B1A3133A6C97007CB4EC /* ZBTransitionSubtypeController.m */,
+			);
+			name = Transition;
+			sourceTree = "<group>";
+		};
+		D447B144133A696F007CB4EC /* Bike */ = {
+			isa = PBXGroup;
+			children = (
+				D447B145133A696F007CB4EC /* bike1.jpg */,
+				D447B146133A696F007CB4EC /* bike2.jpg */,
+				D447B147133A696F007CB4EC /* bike3.jpg */,
+				D447B148133A696F007CB4EC /* bike4.jpg */,
+				D447B149133A696F007CB4EC /* bike5.jpg */,
+			);
+			path = Bike;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +267,11 @@
 				D447B0A6133A5F71007CB4EC /* banana6.tiff in Resources */,
 				D447B0A7133A5F71007CB4EC /* banana7.tiff in Resources */,
 				D447B0A8133A5F71007CB4EC /* banana8.tiff in Resources */,
+				D447B14A133A696F007CB4EC /* bike1.jpg in Resources */,
+				D447B14B133A696F007CB4EC /* bike2.jpg in Resources */,
+				D447B14C133A696F007CB4EC /* bike3.jpg in Resources */,
+				D447B14D133A696F007CB4EC /* bike4.jpg in Resources */,
+				D447B14E133A696F007CB4EC /* bike5.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +287,9 @@
 				28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */,
 				D447B095133A5F68007CB4EC /* ZBBananaViewController.m in Sources */,
 				D447B096133A5F68007CB4EC /* ZBBananaLayer.m in Sources */,
+				D447B0E6133A61F6007CB4EC /* ZBTransitionViewController.m in Sources */,
+				D447B0F0133A64CE007CB4EC /* ZBTransitionTypeController.m in Sources */,
+				D447B1A4133A6C97007CB4EC /* ZBTransitionSubtypeController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
