@@ -32,6 +32,9 @@
 		D447B14D133A696F007CB4EC /* bike4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D447B148133A696F007CB4EC /* bike4.jpg */; };
 		D447B14E133A696F007CB4EC /* bike5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D447B149133A696F007CB4EC /* bike5.jpg */; };
 		D447B1A4133A6C97007CB4EC /* ZBTransitionSubtypeController.m in Sources */ = {isa = PBXBuildFile; fileRef = D447B1A3133A6C97007CB4EC /* ZBTransitionSubtypeController.m */; };
+		D447B22E133A74B9007CB4EC /* ZBLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D447B22D133A74B9007CB4EC /* ZBLayoutViewController.m */; };
+		D447B235133A74E4007CB4EC /* ZBLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = D447B234133A74E4007CB4EC /* ZBLayoutView.m */; };
+		D447B249133A75D6007CB4EC /* ZBLayoutLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D447B248133A75D6007CB4EC /* ZBLayoutLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +73,12 @@
 		D447B149133A696F007CB4EC /* bike5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bike5.jpg; sourceTree = "<group>"; };
 		D447B1A2133A6C97007CB4EC /* ZBTransitionSubtypeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBTransitionSubtypeController.h; sourceTree = "<group>"; };
 		D447B1A3133A6C97007CB4EC /* ZBTransitionSubtypeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBTransitionSubtypeController.m; sourceTree = "<group>"; };
+		D447B22C133A74B9007CB4EC /* ZBLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBLayoutViewController.h; sourceTree = "<group>"; };
+		D447B22D133A74B9007CB4EC /* ZBLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBLayoutViewController.m; sourceTree = "<group>"; };
+		D447B233133A74E4007CB4EC /* ZBLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBLayoutView.h; sourceTree = "<group>"; };
+		D447B234133A74E4007CB4EC /* ZBLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBLayoutView.m; sourceTree = "<group>"; };
+		D447B247133A75D6007CB4EC /* ZBLayoutLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBLayoutLayer.h; sourceTree = "<group>"; };
+		D447B248133A75D6007CB4EC /* ZBLayoutLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBLayoutLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +99,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D447B229133A74A3007CB4EC /* Layout */,
 				D447B0E1133A61D6007CB4EC /* Transition */,
 				D447B084133A5F59007CB4EC /* Banana */,
 				28C286DF0D94DF7D0034E888 /* RootViewController.h */,
@@ -209,6 +219,19 @@
 			path = Bike;
 			sourceTree = "<group>";
 		};
+		D447B229133A74A3007CB4EC /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				D447B22C133A74B9007CB4EC /* ZBLayoutViewController.h */,
+				D447B22D133A74B9007CB4EC /* ZBLayoutViewController.m */,
+				D447B233133A74E4007CB4EC /* ZBLayoutView.h */,
+				D447B234133A74E4007CB4EC /* ZBLayoutView.m */,
+				D447B247133A75D6007CB4EC /* ZBLayoutLayer.h */,
+				D447B248133A75D6007CB4EC /* ZBLayoutLayer.m */,
+			);
+			name = Layout;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -290,6 +313,9 @@
 				D447B0E6133A61F6007CB4EC /* ZBTransitionViewController.m in Sources */,
 				D447B0F0133A64CE007CB4EC /* ZBTransitionTypeController.m in Sources */,
 				D447B1A4133A6C97007CB4EC /* ZBTransitionSubtypeController.m in Sources */,
+				D447B22E133A74B9007CB4EC /* ZBLayoutViewController.m in Sources */,
+				D447B235133A74E4007CB4EC /* ZBLayoutView.m in Sources */,
+				D447B249133A75D6007CB4EC /* ZBLayoutLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

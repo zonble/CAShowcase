@@ -1,6 +1,7 @@
 #import "RootViewController.h"
 #import "ZBBananaViewController.h"
 #import "ZBTransitionViewController.h"
+#import "ZBLayoutViewController.h"
 
 @implementation RootViewController
 
@@ -31,7 +32,7 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
 {
-    return 2;
+    return 3;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
@@ -49,6 +50,10 @@
 		case 1:
 			cell.textLabel.text = @"Transitions";
 			break;			
+		case 2:
+			cell.textLabel.text = @"Auto-layout";
+			break;			
+			
 		default:
 			break;
 	}
@@ -73,6 +78,11 @@
 			controller = [[ZBTransitionViewController alloc] init];
 		}
 			break;
+		case 2:
+		{
+			controller = [[ZBLayoutViewController alloc] init];
+		}
+			break;
 		default:
 			break;
 	}
@@ -92,5 +102,6 @@
 }
 
 @end
+
 
 
