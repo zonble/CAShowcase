@@ -11,7 +11,6 @@
 	return self;
 }
 
-
 - (void)loadView 
 {
 	ZBLayoutView *aView = [[ZBLayoutView alloc] initWithFrame:[UIScreen mainScreen].bounds];
@@ -19,5 +18,9 @@
 	self.view = [aView autorelease];
 }
 
+ - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+	return YES;
+}
 
 @end

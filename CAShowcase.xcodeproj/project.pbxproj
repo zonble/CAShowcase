@@ -35,6 +35,8 @@
 		D447B22E133A74B9007CB4EC /* ZBLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D447B22D133A74B9007CB4EC /* ZBLayoutViewController.m */; };
 		D447B235133A74E4007CB4EC /* ZBLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = D447B234133A74E4007CB4EC /* ZBLayoutView.m */; };
 		D447B249133A75D6007CB4EC /* ZBLayoutLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D447B248133A75D6007CB4EC /* ZBLayoutLayer.m */; };
+		D447B319133A80EA007CB4EC /* ZBAnimateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D447B318133A80EA007CB4EC /* ZBAnimateTableViewController.m */; };
+		D447B445133A8F33007CB4EC /* ZBTransitionSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D447B444133A8F33007CB4EC /* ZBTransitionSettingsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +81,10 @@
 		D447B234133A74E4007CB4EC /* ZBLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBLayoutView.m; sourceTree = "<group>"; };
 		D447B247133A75D6007CB4EC /* ZBLayoutLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBLayoutLayer.h; sourceTree = "<group>"; };
 		D447B248133A75D6007CB4EC /* ZBLayoutLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBLayoutLayer.m; sourceTree = "<group>"; };
+		D447B317133A80EA007CB4EC /* ZBAnimateTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBAnimateTableViewController.h; sourceTree = "<group>"; };
+		D447B318133A80EA007CB4EC /* ZBAnimateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBAnimateTableViewController.m; sourceTree = "<group>"; };
+		D447B443133A8F33007CB4EC /* ZBTransitionSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBTransitionSettingsTableViewController.h; sourceTree = "<group>"; };
+		D447B444133A8F33007CB4EC /* ZBTransitionSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBTransitionSettingsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D447B316133A80BC007CB4EC /* Table view */,
 				D447B229133A74A3007CB4EC /* Layout */,
 				D447B0E1133A61D6007CB4EC /* Transition */,
 				D447B084133A5F59007CB4EC /* Banana */,
@@ -203,6 +210,8 @@
 				D447B0EF133A64CE007CB4EC /* ZBTransitionTypeController.m */,
 				D447B1A2133A6C97007CB4EC /* ZBTransitionSubtypeController.h */,
 				D447B1A3133A6C97007CB4EC /* ZBTransitionSubtypeController.m */,
+				D447B443133A8F33007CB4EC /* ZBTransitionSettingsTableViewController.h */,
+				D447B444133A8F33007CB4EC /* ZBTransitionSettingsTableViewController.m */,
 			);
 			name = Transition;
 			sourceTree = "<group>";
@@ -230,6 +239,15 @@
 				D447B248133A75D6007CB4EC /* ZBLayoutLayer.m */,
 			);
 			name = Layout;
+			sourceTree = "<group>";
+		};
+		D447B316133A80BC007CB4EC /* Table view */ = {
+			isa = PBXGroup;
+			children = (
+				D447B317133A80EA007CB4EC /* ZBAnimateTableViewController.h */,
+				D447B318133A80EA007CB4EC /* ZBAnimateTableViewController.m */,
+			);
+			name = "Table view";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +334,8 @@
 				D447B22E133A74B9007CB4EC /* ZBLayoutViewController.m in Sources */,
 				D447B235133A74E4007CB4EC /* ZBLayoutView.m in Sources */,
 				D447B249133A75D6007CB4EC /* ZBLayoutLayer.m in Sources */,
+				D447B319133A80EA007CB4EC /* ZBAnimateTableViewController.m in Sources */,
+				D447B445133A8F33007CB4EC /* ZBTransitionSettingsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

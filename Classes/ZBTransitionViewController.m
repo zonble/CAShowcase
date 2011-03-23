@@ -26,6 +26,8 @@
 	[images release];
 	[typeController release];
 	[subtypeController release];
+	[settingController release];
+	[settingNavController release];
 	[super dealloc];
 }
 
@@ -102,6 +104,15 @@
 	NSString *subtypeTitle = [NSString stringWithFormat:@"Subtype: %@", subtypeController.selectedSubtype];
 	[self.selectSubtypeButton setTitle:subtypeTitle forState:UIControlStateNormal];
 	
+	if (!settingController) {
+		settingController = [[ZBTransitionSettingsTableViewController alloc] initWithStyle:UITableViewStyleGrouped];
+	}
+	if (!settingNavController) {
+		settingNavController = [[UINavigationController alloc] initWithRootViewController:settingController];
+	}
+	UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStyleBordered target:self action:@selector(showSettings:)];
+	self.navigationItem.rightBarButtonItem = item;
+	[item release];
 	
 	self.imageView.layer.contents = (id)[UIImage imageNamed:[images objectAtIndex:imageIndex]].CGImage;
 	
@@ -137,13 +148,26 @@
 		imageIndex = 0;
 	}
 	CATransition *t = [CATransition animation];
+	t.type = typeController.selectedType;
+	t.subtype = subtypeController.selectedSubtype;
+	
+	if (settingController.useLongerAnimationDuration) {
+		t.duration = 1.5;
+		t.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+	}
+
 //	CAFilter* filter = [CAFilter filterWithName:typeController.selectedType];
 //	t.filter = filter;
 	
-	t.type = typeController.selectedType;
-	t.subtype = subtypeController.selectedSubtype;
 	self.imageView.layer.contents = (id)[UIImage imageNamed:[images objectAtIndex:imageIndex]].CGImage;
-	[self.imageView.layer addAnimation:t forKey:@"Transition"];
+	if (settingController.useFullView) {
+		[self.view.layer addAnimation:t forKey:@"Transition"];
+	}
+	else {
+		[self.imageView.layer addAnimation:t forKey:@"Transition"];
+	}
+
+
 }
 - (IBAction)selectType:(id)sender
 {
@@ -152,6 +176,10 @@
 - (IBAction)selectSubtype:(id)sender
 {
 	[self.navigationController pushViewController:subtypeController animated:YES];
+}
+- (IBAction)showSettings:(id)sender
+{
+	[self.navigationController presentModalViewController:settingNavController animated:YES];
 }
 
 #pragma mark -
