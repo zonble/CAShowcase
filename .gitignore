@@ -1,0 +1,15 @@
+build
+build.txt
+*.pbxuser
+*.mode1v3
+*.tm_build_errors
+*.wdgtuser
+*.perspectivev3
+*.pyc
+*.xcworkspace
+xcuserdata
+.DS_Store
+KKBOX/Distribution/openUp
+KKBOX/Widget/KKBOX.dcproj/project.wdgt/KKBOXPlugin.widgetplugin
+KKBOXClientVersion.h
+
