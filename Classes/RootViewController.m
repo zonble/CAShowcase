@@ -3,6 +3,7 @@
 #import "ZBTransitionViewController.h"
 #import "ZBLayoutViewController.h"
 #import "ZBAnimateTableViewController.h"
+#import "ZBFireworkViewController.h"
 
 @implementation RootViewController
 
@@ -33,7 +34,7 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
 {
-    return 4;
+    return 5;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
@@ -57,6 +58,10 @@
 		case 3:
 			cell.textLabel.text = @"Tableview";
 			break;
+		case 4:
+			cell.textLabel.text = @"Firework";
+			break;
+			
 		default:
 			break;
 	}
@@ -89,6 +94,11 @@
 		case 3:
 		{
 			controller = [[ZBAnimateTableViewController alloc] init];
+		}
+			break;
+		case 4:
+		{
+			controller = [[ZBFireworkViewController alloc] init];
 		}
 			break;
 		default:

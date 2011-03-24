@@ -37,6 +37,9 @@
 		D447B249133A75D6007CB4EC /* ZBLayoutLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D447B248133A75D6007CB4EC /* ZBLayoutLayer.m */; };
 		D447B319133A80EA007CB4EC /* ZBAnimateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D447B318133A80EA007CB4EC /* ZBAnimateTableViewController.m */; };
 		D447B445133A8F33007CB4EC /* ZBTransitionSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D447B444133A8F33007CB4EC /* ZBTransitionSettingsTableViewController.m */; };
+		D4F3E093133AF0310074E744 /* ZBFireworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F3E092133AF0310074E744 /* ZBFireworkViewController.m */; };
+		D4F3E09F133AF0A30074E744 /* ZBFireworkView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F3E09E133AF0A30074E744 /* ZBFireworkView.m */; };
+		D4F3E0AC133AF1830074E744 /* ZBFireworkLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F3E0AB133AF1830074E744 /* ZBFireworkLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +88,12 @@
 		D447B318133A80EA007CB4EC /* ZBAnimateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBAnimateTableViewController.m; sourceTree = "<group>"; };
 		D447B443133A8F33007CB4EC /* ZBTransitionSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBTransitionSettingsTableViewController.h; sourceTree = "<group>"; };
 		D447B444133A8F33007CB4EC /* ZBTransitionSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBTransitionSettingsTableViewController.m; sourceTree = "<group>"; };
+		D4F3E091133AF0310074E744 /* ZBFireworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBFireworkViewController.h; sourceTree = "<group>"; };
+		D4F3E092133AF0310074E744 /* ZBFireworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBFireworkViewController.m; sourceTree = "<group>"; };
+		D4F3E09D133AF0A30074E744 /* ZBFireworkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBFireworkView.h; sourceTree = "<group>"; };
+		D4F3E09E133AF0A30074E744 /* ZBFireworkView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBFireworkView.m; sourceTree = "<group>"; };
+		D4F3E0AA133AF1830074E744 /* ZBFireworkLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBFireworkLayer.h; sourceTree = "<group>"; };
+		D4F3E0AB133AF1830074E744 /* ZBFireworkLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBFireworkLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +114,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D4F3E08E133AF0170074E744 /* Firework */,
 				D447B316133A80BC007CB4EC /* Table view */,
 				D447B229133A74A3007CB4EC /* Layout */,
 				D447B0E1133A61D6007CB4EC /* Transition */,
@@ -250,6 +260,19 @@
 			name = "Table view";
 			sourceTree = "<group>";
 		};
+		D4F3E08E133AF0170074E744 /* Firework */ = {
+			isa = PBXGroup;
+			children = (
+				D4F3E091133AF0310074E744 /* ZBFireworkViewController.h */,
+				D4F3E092133AF0310074E744 /* ZBFireworkViewController.m */,
+				D4F3E09D133AF0A30074E744 /* ZBFireworkView.h */,
+				D4F3E09E133AF0A30074E744 /* ZBFireworkView.m */,
+				D4F3E0AA133AF1830074E744 /* ZBFireworkLayer.h */,
+				D4F3E0AB133AF1830074E744 /* ZBFireworkLayer.m */,
+			);
+			name = Firework;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -336,6 +359,9 @@
 				D447B249133A75D6007CB4EC /* ZBLayoutLayer.m in Sources */,
 				D447B319133A80EA007CB4EC /* ZBAnimateTableViewController.m in Sources */,
 				D447B445133A8F33007CB4EC /* ZBTransitionSettingsTableViewController.m in Sources */,
+				D4F3E093133AF0310074E744 /* ZBFireworkViewController.m in Sources */,
+				D4F3E09F133AF0A30074E744 /* ZBFireworkView.m in Sources */,
+				D4F3E0AC133AF1830074E744 /* ZBFireworkLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

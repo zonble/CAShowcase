@@ -161,7 +161,8 @@
 	
 	self.imageView.layer.contents = (id)[UIImage imageNamed:[images objectAtIndex:imageIndex]].CGImage;
 	if (settingController.useFullView) {
-		[self.view.layer addAnimation:t forKey:@"Transition"];
+//		[self.view.layer addAnimation:t forKey:@"Transition"];
+		[self.navigationController.view.layer addAnimation:t forKey:@"Transition"];
 	}
 	else {
 		[self.imageView.layer addAnimation:t forKey:@"Transition"];

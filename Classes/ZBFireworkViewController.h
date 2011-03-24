@@ -1,0 +1,6 @@
+@interface ZBFireworkViewController : UIViewController 
+{
+
+}
+
+@end

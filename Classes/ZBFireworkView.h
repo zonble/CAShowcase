@@ -1,0 +1,6 @@
+@interface ZBFireworkView : UIView 
+{
+
+}
+
+@end
