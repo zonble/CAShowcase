@@ -41,6 +41,11 @@
 		D4F3E09F133AF0A30074E744 /* ZBFireworkView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F3E09E133AF0A30074E744 /* ZBFireworkView.m */; };
 		D4F3E0AC133AF1830074E744 /* ZBFireworkLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F3E0AB133AF1830074E744 /* ZBFireworkLayer.m */; };
 		D4F889E1133B24E600F536FB /* stars.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D4F889E0133B24E600F536FB /* stars.jpg */; };
+		D4F889EF133B2C5A00F536FB /* ZBGridController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F889EE133B2C5A00F536FB /* ZBGridController.m */; };
+		D4F889F2133B2CA800F536FB /* ZBGridControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F889F1133B2CA800F536FB /* ZBGridControl.m */; };
+		D4F889F5133B2E1700F536FB /* ZBGridLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F889F4133B2E1700F536FB /* ZBGridLayer.m */; };
+		D4F88A08133BB67600F536FB /* ZBGridImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F88A07133BB67600F536FB /* ZBGridImageViewController.m */; };
+		D4F88A0C133BB8D900F536FB /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F88A0B133BB8D900F536FB /* UIView+Screenshot.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +101,16 @@
 		D4F3E0AA133AF1830074E744 /* ZBFireworkLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBFireworkLayer.h; sourceTree = "<group>"; };
 		D4F3E0AB133AF1830074E744 /* ZBFireworkLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBFireworkLayer.m; sourceTree = "<group>"; };
 		D4F889E0133B24E600F536FB /* stars.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stars.jpg; sourceTree = "<group>"; };
+		D4F889ED133B2C5A00F536FB /* ZBGridController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBGridController.h; sourceTree = "<group>"; };
+		D4F889EE133B2C5A00F536FB /* ZBGridController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBGridController.m; sourceTree = "<group>"; };
+		D4F889F0133B2CA800F536FB /* ZBGridControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBGridControl.h; sourceTree = "<group>"; };
+		D4F889F1133B2CA800F536FB /* ZBGridControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBGridControl.m; sourceTree = "<group>"; };
+		D4F889F3133B2E1700F536FB /* ZBGridLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBGridLayer.h; sourceTree = "<group>"; };
+		D4F889F4133B2E1700F536FB /* ZBGridLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBGridLayer.m; sourceTree = "<group>"; };
+		D4F88A06133BB67500F536FB /* ZBGridImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBGridImageViewController.h; sourceTree = "<group>"; };
+		D4F88A07133BB67600F536FB /* ZBGridImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBGridImageViewController.m; sourceTree = "<group>"; };
+		D4F88A0A133BB8D900F536FB /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Screenshot.h"; sourceTree = "<group>"; };
+		D4F88A0B133BB8D900F536FB /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Screenshot.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +131,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D4F889E3133B27DA00F536FB /* Grid Control */,
 				D4F3E08E133AF0170074E744 /* Firework */,
 				D447B316133A80BC007CB4EC /* Table view */,
 				D447B229133A74A3007CB4EC /* Layout */,
@@ -276,6 +292,23 @@
 			name = Firework;
 			sourceTree = "<group>";
 		};
+		D4F889E3133B27DA00F536FB /* Grid Control */ = {
+			isa = PBXGroup;
+			children = (
+				D4F889ED133B2C5A00F536FB /* ZBGridController.h */,
+				D4F889EE133B2C5A00F536FB /* ZBGridController.m */,
+				D4F889F0133B2CA800F536FB /* ZBGridControl.h */,
+				D4F889F1133B2CA800F536FB /* ZBGridControl.m */,
+				D4F889F3133B2E1700F536FB /* ZBGridLayer.h */,
+				D4F889F4133B2E1700F536FB /* ZBGridLayer.m */,
+				D4F88A06133BB67500F536FB /* ZBGridImageViewController.h */,
+				D4F88A07133BB67600F536FB /* ZBGridImageViewController.m */,
+				D4F88A0A133BB8D900F536FB /* UIView+Screenshot.h */,
+				D4F88A0B133BB8D900F536FB /* UIView+Screenshot.m */,
+			);
+			name = "Grid Control";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -366,6 +399,11 @@
 				D4F3E093133AF0310074E744 /* ZBFireworkViewController.m in Sources */,
 				D4F3E09F133AF0A30074E744 /* ZBFireworkView.m in Sources */,
 				D4F3E0AC133AF1830074E744 /* ZBFireworkLayer.m in Sources */,
+				D4F889EF133B2C5A00F536FB /* ZBGridController.m in Sources */,
+				D4F889F2133B2CA800F536FB /* ZBGridControl.m in Sources */,
+				D4F889F5133B2E1700F536FB /* ZBGridLayer.m in Sources */,
+				D4F88A08133BB67600F536FB /* ZBGridImageViewController.m in Sources */,
+				D4F88A0C133BB8D900F536FB /* UIView+Screenshot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

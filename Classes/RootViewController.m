@@ -4,6 +4,7 @@
 #import "ZBLayoutViewController.h"
 #import "ZBAnimateTableViewController.h"
 #import "ZBFireworkViewController.h"
+#import "ZBGridController.h"
 
 @implementation RootViewController
 
@@ -34,7 +35,7 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
 {
-    return 5;
+    return 6;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
@@ -61,7 +62,9 @@
 		case 4:
 			cell.textLabel.text = @"Fireworks";
 			break;
-			
+		case 5:
+			cell.textLabel.text = @"Grid Control";
+			break;			
 		default:
 			break;
 	}
@@ -101,6 +104,12 @@
 			controller = [[ZBFireworkViewController alloc] init];
 		}
 			break;
+		case 5:
+		{
+			controller = [[ZBGridController alloc] init];
+		}
+			break;
+			
 		default:
 			break;
 	}
