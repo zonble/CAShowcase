@@ -3,6 +3,14 @@
 
 @implementation ZBFireworkViewController
 
+- (id)init {
+    self = [super init];
+    if (self) {
+        self.title = @"Fireworks";
+    }
+    return self;
+}
+
 - (void)loadView 
 {
 	ZBFireworkView *aView = [[ZBFireworkView alloc] initWithFrame:[UIScreen mainScreen].bounds];

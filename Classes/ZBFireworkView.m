@@ -10,7 +10,7 @@
 
 - (void)tap:(UIGestureRecognizer *)r
 {
-	NSLog(@"%s", __PRETTY_FUNCTION__);
+//	NSLog(@"%s", __PRETTY_FUNCTION__);
 	CGPoint location = [r locationInView:self];
 	CGFloat hue = ((NSInteger)[NSDate timeIntervalSinceReferenceDate] % 10) / (CGFloat)10;
 	ZBFireworkLayer *aLayer = [[[ZBFireworkLayer alloc] initWithHue:hue] autorelease];
@@ -43,6 +43,18 @@
 		[self _init];
 	}	
     return self;
+}
+
+- (void)drawRect:(CGRect)rect
+{
+	[super drawRect:rect];
+	[[UIImage imageNamed:@"stars.jpg"] drawInRect:self.bounds];
+	
+	NSString *msg = @"Tap to fire!";
+	CGRect textFrame = CGRectMake(10.0, 20.0, self.bounds.size.width - 20.0, 30.0);
+	[[UIColor whiteColor] set];
+	[msg drawInRect:textFrame withFont:[UIFont boldSystemFontOfSize:18.0] lineBreakMode:UILineBreakModeTailTruncation alignment:UITextAlignmentCenter];
+	
 }
 
 

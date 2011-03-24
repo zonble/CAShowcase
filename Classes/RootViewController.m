@@ -59,7 +59,7 @@
 			cell.textLabel.text = @"Tableview";
 			break;
 		case 4:
-			cell.textLabel.text = @"Firework";
+			cell.textLabel.text = @"Fireworks";
 			break;
 			
 		default:
