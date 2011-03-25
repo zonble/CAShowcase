@@ -13,6 +13,8 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		D43D6931133D04F0000B3FDB /* ZBPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43D6930133D04F0000B3FDB /* ZBPathViewController.m */; };
+		D43D6934133D052E000B3FDB /* ZBPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = D43D6933133D052E000B3FDB /* ZBPathView.m */; };
 		D447B095133A5F68007CB4EC /* ZBBananaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D447B092133A5F68007CB4EC /* ZBBananaViewController.m */; };
 		D447B096133A5F68007CB4EC /* ZBBananaLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D447B094133A5F68007CB4EC /* ZBBananaLayer.m */; };
 		D447B0A1133A5F71007CB4EC /* banana1.tiff in Resources */ = {isa = PBXBuildFile; fileRef = D447B099133A5F71007CB4EC /* banana1.tiff */; };
@@ -60,6 +62,10 @@
 		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* CAShowcase-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CAShowcase-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		D43D692F133D04F0000B3FDB /* ZBPathViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBPathViewController.h; sourceTree = "<group>"; };
+		D43D6930133D04F0000B3FDB /* ZBPathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBPathViewController.m; sourceTree = "<group>"; };
+		D43D6932133D052E000B3FDB /* ZBPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBPathView.h; sourceTree = "<group>"; };
+		D43D6933133D052E000B3FDB /* ZBPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBPathView.m; sourceTree = "<group>"; };
 		D447B091133A5F68007CB4EC /* ZBBananaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBBananaViewController.h; sourceTree = "<group>"; };
 		D447B092133A5F68007CB4EC /* ZBBananaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBBananaViewController.m; sourceTree = "<group>"; };
 		D447B093133A5F68007CB4EC /* ZBBananaLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBBananaLayer.h; sourceTree = "<group>"; };
@@ -131,6 +137,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D43D692D133D04C0000B3FDB /* Path */,
 				D4F889E3133B27DA00F536FB /* Grid Control */,
 				D4F3E08E133AF0170074E744 /* Firework */,
 				D447B316133A80BC007CB4EC /* Table view */,
@@ -192,6 +199,17 @@
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D43D692D133D04C0000B3FDB /* Path */ = {
+			isa = PBXGroup;
+			children = (
+				D43D692F133D04F0000B3FDB /* ZBPathViewController.h */,
+				D43D6930133D04F0000B3FDB /* ZBPathViewController.m */,
+				D43D6932133D052E000B3FDB /* ZBPathView.h */,
+				D43D6933133D052E000B3FDB /* ZBPathView.m */,
+			);
+			name = Path;
 			sourceTree = "<group>";
 		};
 		D447B084133A5F59007CB4EC /* Banana */ = {
@@ -404,6 +422,8 @@
 				D4F889F5133B2E1700F536FB /* ZBGridLayer.m in Sources */,
 				D4F88A08133BB67600F536FB /* ZBGridImageViewController.m in Sources */,
 				D4F88A0C133BB8D900F536FB /* UIView+Screenshot.m in Sources */,
+				D43D6931133D04F0000B3FDB /* ZBPathViewController.m in Sources */,
+				D43D6934133D052E000B3FDB /* ZBPathView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

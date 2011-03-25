@@ -99,15 +99,6 @@ static CGFloat itemWidth = 80.0;
 - (void)resetSelection
 {
 	ZBGridLayer *aLayer = [layers objectAtIndex:selectedIndex];
-	[aLayer removeAllAnimations];
-	[CATransaction begin];
-	[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
-	aLayer.hidden = NO;
-	[CATransaction commit];
-	
-	aLayer.contents = nil;
-	aLayer.image = [dataSource imageForItemInGridControl:self atIndex:selectedIndex];
-
 	
 	NSUInteger k = itemsPerRow;
 	CGFloat border = 60.0;
@@ -132,14 +123,14 @@ static CGFloat itemWidth = 80.0;
 	boundsAnimation.toValue = [NSValue valueWithCGRect:CGRectMake(0.0, 0.0, itemHeight, itemWidth)];
 	
 	CATransition *t = [CATransition animation];
-//	t.type = @"flip";
-	t.type = @"rotate";
-//	t.type = @"rippleEffect";
+	t.type = @"flip";
 	t.subtype = kCATransitionFromLeft;
 	t.duration = 0.25;
-	t.beginTime = CACurrentMediaTime() + 0.1;
 	t.removedOnCompletion = YES;
-		
+	
+	aLayer.contents = nil;
+	aLayer.image = [dataSource imageForItemInGridControl:self atIndex:selectedIndex];
+	
 	CAAnimationGroup *group = [CAAnimationGroup animation];
 	group.duration = 0.5;
 	group.animations = [NSArray arrayWithObjects:positionAnimation, boundsAnimation, nil];

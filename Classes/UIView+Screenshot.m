@@ -5,7 +5,7 @@
 - (UIImage *)screenshot
 {
 	UIGraphicsBeginImageContext(self.bounds.size);
-	[[UIColor blackColor] setFill];
+	[[UIColor clearColor] setFill];
 	[[UIBezierPath bezierPathWithRect:self.bounds] fill];
 	CGContextRef ctx = UIGraphicsGetCurrentContext();
 	[self.layer renderInContext:ctx];

@@ -1,5 +1,6 @@
 #import "RootViewController.h"
 #import "ZBBananaViewController.h"
+#import "ZBPathViewController.h"
 #import "ZBTransitionViewController.h"
 #import "ZBLayoutViewController.h"
 #import "ZBAnimateTableViewController.h"
@@ -35,7 +36,7 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
 {
-    return 6;
+    return 7;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
@@ -51,19 +52,22 @@
 			cell.textLabel.text = @"1. Basic Animation";
 			break;
 		case 1:
-			cell.textLabel.text = @"2. Transitions";
-			break;			
-		case 2:
-			cell.textLabel.text = @"3. Auto-layout";
+			cell.textLabel.text = @"2. CAKeyframeAnimation";
 			break;
+		case 2:
+			cell.textLabel.text = @"3. Transitions";
+			break;			
 		case 3:
-			cell.textLabel.text = @"4. Tableview";
+			cell.textLabel.text = @"4. Auto-layout";
 			break;
 		case 4:
-			cell.textLabel.text = @"5. Fireworks";
+			cell.textLabel.text = @"5. Tableview";
 			break;
 		case 5:
-			cell.textLabel.text = @"6. Grid Control";
+			cell.textLabel.text = @"6. Fireworks";
+			break;
+		case 6:
+			cell.textLabel.text = @"7. Grid Control";
 			break;			
 		default:
 			break;
@@ -86,25 +90,30 @@
 			break;
 		case 1:
 		{
-			controller = [[ZBTransitionViewController alloc] init];
+			controller = [[ZBPathViewController alloc] init];
 		}
 			break;
 		case 2:
 		{
-			controller = [[ZBLayoutViewController alloc] init];
+			controller = [[ZBTransitionViewController alloc] init];
 		}
 			break;
 		case 3:
 		{
-			controller = [[ZBAnimateTableViewController alloc] init];
+			controller = [[ZBLayoutViewController alloc] init];
 		}
 			break;
 		case 4:
 		{
-			controller = [[ZBFireworkViewController alloc] init];
+			controller = [[ZBAnimateTableViewController alloc] init];
 		}
 			break;
 		case 5:
+		{
+			controller = [[ZBFireworkViewController alloc] init];
+		}
+			break;
+		case 6:
 		{
 			controller = [[ZBGridController alloc] init];
 		}

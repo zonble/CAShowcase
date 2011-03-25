@@ -41,6 +41,7 @@
 		self.title = @"Grid Control";
 		images = [[NSArray alloc] initWithObjects:@"bike1.jpg", @"bike2.jpg", @"bike3.jpg", @"bike4.jpg", @"bike5.jpg",
 				  @"bike1.jpg", @"bike2.jpg", @"bike3.jpg", @"bike4.jpg", @"bike5.jpg",
+				  @"bike1.jpg", @"bike2.jpg", @"bike3.jpg", @"bike4.jpg", @"bike5.jpg",
 				  @"bike1.jpg", @"bike2.jpg", @"bike3.jpg", @"bike4.jpg", @"bike5.jpg", nil];
 		imageViewController = [[ZBGridImageViewController alloc] init];
 		imageViewController.delegate = self;
@@ -73,14 +74,16 @@
 
 - (void)imageViewControllerDidClose:(ZBGridImageViewController *)inController
 {
-	[self dismissModalViewControllerAnimated:NO];
 	[CATransaction begin];
 	[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
-	self.transitionLayer.frame = self.navigationController.view.bounds;
 	[self.transitionLayer removeAllAnimations];
+	self.transitionLayer.contents = (id)[inController.navigationController.view screenshot].CGImage;
+	self.transitionLayer.hidden = NO;
+	self.transitionLayer.frame = self.navigationController.view.bounds;
 	[CATransaction commit];
-	[control resetSelection];
+	[control performSelector:@selector(resetSelection) withObject:nil afterDelay:0.0];
 	self.transitionLayer = nil;
+	[self dismissModalViewControllerAnimated:NO];
 }
 
 #pragma -
@@ -99,8 +102,9 @@
 {
 	UIImage *image = [UIImage imageNamed:[images objectAtIndex:inIndex]];
 	imageViewController.image = image;
+	imageViewController.title = [images objectAtIndex:inIndex];
 	imageNavController.view.frame = self.navigationController.view.frame;
-	UIImage *screenshot = [imageViewController.view screenshot];
+	UIImage *screenshot = [imageNavController.view screenshot];
 	
 	self.transitionLayer = (ZBGridLayer *)inLayer;
 	
@@ -121,9 +125,10 @@
 	
 	CATransition *t = [CATransition animation];
 	t.type = @"flip";
+//	t.type = @"cube";
 	t.subtype = kCATransitionFromRight;
+	t.duration = 0.25;
 	self.transitionLayer.contents = (id)screenshot.CGImage;
-
 	
 	CAAnimationGroup *group = [CAAnimationGroup animation];
 	group.duration = 0.5;

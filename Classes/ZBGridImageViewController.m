@@ -31,6 +31,7 @@
 	imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
 	imageView.image = self.image;
 	imageView.contentMode = UIViewContentModeScaleAspectFit;
+	imageView.backgroundColor = [UIColor darkGrayColor];
 	self.view = [imageView autorelease];
 	
 	label = [[UILabel alloc] initWithFrame:CGRectMake(10.0, self.view.bounds.size.height - 80.0, self.view.bounds.size.width - 20.0, 60.0)];
