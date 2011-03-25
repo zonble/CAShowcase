@@ -26,6 +26,12 @@
 	[super didReceiveMemoryWarning];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+	[super viewWillAppear:animated];
+	[self.control setNeedsLayout];
+}
+
 #pragma mark - View lifecycle
 
 - (id)init 
@@ -58,32 +64,10 @@
 	
 	ZBGridControl *aControl = [[ZBGridControl alloc] initWithFrame:aView.bounds];
 	aControl.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	aControl.dataSource = self;
 	self.control = [aControl autorelease];
 	[self.view addSubview:self.control];
+	self.control.dataSource = self;
 }
-/*
-- (void)viewDidLoad 
-{
-    [super viewDidLoad];
-}
-- (void)viewWillAppear:(BOOL)animated 
-{
-    [super viewWillAppear:animated];
-}
-- (void)viewDidAppear:(BOOL)animated 
-{
-    [super viewDidAppear:animated];
-}
-- (void)viewWillDisappear:(BOOL)animated 
-{
-	[super viewWillDisappear:animated];
-}
-- (void)viewDidDisappear:(BOOL)animated 
-{
-	[super viewDidDisappear:animated];
-}
-*/
 
 #pragma -
 
@@ -126,10 +110,6 @@
 	[self.navigationController.view.layer addSublayer:self.transitionLayer];
 	self.transitionLayer.frame = fromRect;
 	[CATransaction commit];
-
-	CABasicAnimation *contentsAnimation = [CABasicAnimation animationWithKeyPath:@"contents"];
-	contentsAnimation.fromValue = self.transitionLayer.contents;
-	contentsAnimation.toValue = (id)screenshot.CGImage;
 	
 	CABasicAnimation *boundsAnimation = [CABasicAnimation animationWithKeyPath:@"bounds"];
 	boundsAnimation.fromValue = [NSValue valueWithCGRect:self.transitionLayer.frame];
@@ -139,13 +119,20 @@
 	positionAnimation.fromValue = [NSValue valueWithCGPoint:self.transitionLayer.position];
 	positionAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(CGRectGetMidX(self.navigationController.view.bounds), CGRectGetMidY(self.navigationController.view.bounds))];
 	
+	CATransition *t = [CATransition animation];
+	t.type = @"flip";
+	t.subtype = kCATransitionFromRight;
+	self.transitionLayer.contents = (id)screenshot.CGImage;
+
+	
 	CAAnimationGroup *group = [CAAnimationGroup animation];
-	group.duration = 0.25;
-	group.animations = [NSArray arrayWithObjects:contentsAnimation, boundsAnimation, positionAnimation, nil];
+	group.duration = 0.5;
+	group.animations = [NSArray arrayWithObjects:boundsAnimation, positionAnimation, nil];
 	group.fillMode = kCAFillModeForwards;
 	group.removedOnCompletion = NO;
 	group.delegate = self;
 	[self.transitionLayer addAnimation:group forKey:@"zoomIn"];
+	[self.transitionLayer addAnimation:t forKey:@"flip"];
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag

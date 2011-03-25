@@ -13,11 +13,13 @@
 	id <ZBGridImageViewControllerDelegate> delegate;
 	UIImageView *imageView;
 	UIImage *image;
+	UILabel *label;
 }
 
 - (IBAction)close:(id)sender;
 
 @property (assign, nonatomic) id <ZBGridImageViewControllerDelegate> delegate;
 @property (retain, nonatomic) UIImage *image;
+@property (retain, nonatomic) UILabel *label;
 
 @end

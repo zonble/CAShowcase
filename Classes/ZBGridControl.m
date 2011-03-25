@@ -26,6 +26,7 @@ static CGFloat itemWidth = 80.0;
 	for (CALayer *aLayer in layers) {
 		if (CGRectContainsPoint(aLayer.frame, location)) {
 			selectedIndex = index;
+			[self scrollRectToVisible:CGRectMake(aLayer.frame.origin.x - 10.0, aLayer.frame.origin.y - 10.0, aLayer.frame.size.width + 20.0, aLayer.frame.size.height + 20.0) animated:YES];
 			[dataSource gridContol:self didSelectItemAtIndex:index withLayer:aLayer];
 			break;
 		}
@@ -61,13 +62,6 @@ static CGFloat itemWidth = 80.0;
     return self;
 }
 
-// - (void)drawRect:(CGRect)rect
-// {
-// 	// Drawing code
-// 	// CGContextRef context = UIGraphicsGetCurrentContext();
-// }
-
-
 - (void)reloadData
 {
 	selectedIndex = NSNotFound;
@@ -82,7 +76,10 @@ static CGFloat itemWidth = 80.0;
 	for (NSUInteger index = 0; index < count; index++) {
 		ZBGridLayer *aLayer = [ZBGridLayer layer];
 		aLayer.bounds = CGRectMake(0.0, 0.0, itemHeight, itemWidth);
+		aLayer.view = self;
 		aLayer.image = [dataSource imageForItemInGridControl:self atIndex:index];
+		aLayer.title = @"An Image";
+		aLayer.element.accessibilityLabel = @"An Image";
 		[layers addObject:aLayer];
 	}
 	[self setNeedsLayout];
@@ -91,10 +88,9 @@ static CGFloat itemWidth = 80.0;
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
 	ZBGridLayer *aLayer = [layers objectAtIndex:selectedIndex];
-	aLayer.contents = nil;
-	aLayer.image = [dataSource imageForItemInGridControl:self atIndex:selectedIndex];
-	[aLayer setNeedsDisplay];
 	[aLayer removeAllAnimations];
+	[aLayer setNeedsDisplay];
+	[self.layer addSublayer:aLayer];
 	
 	selectedIndex = NSNotFound;
 	[self setNeedsLayout];
@@ -103,13 +99,15 @@ static CGFloat itemWidth = 80.0;
 - (void)resetSelection
 {
 	ZBGridLayer *aLayer = [layers objectAtIndex:selectedIndex];
+	[aLayer removeAllAnimations];
 	[CATransaction begin];
 	[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
 	aLayer.hidden = NO;
-	CGRect frame = [self.layer convertRect:aLayer.frame fromLayer:aLayer.superlayer];
-	[self.layer addSublayer:aLayer];
-	aLayer.frame = frame;
 	[CATransaction commit];
+	
+	aLayer.contents = nil;
+	aLayer.image = [dataSource imageForItemInGridControl:self atIndex:selectedIndex];
+
 	
 	NSUInteger k = itemsPerRow;
 	CGFloat border = 60.0;
@@ -126,20 +124,31 @@ static CGFloat itemWidth = 80.0;
 	CGPoint position = CGPointMake(border + (indexInRow) * ((self.bounds.size.width - border * 2) / (k - 1)) , ((row + 0.5) * (itemHeight + 20.0)) + 10.0);
 
 	CABasicAnimation *positionAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
-	positionAnimation.fromValue = [NSValue valueWithCGPoint:[self.layer convertPoint:aLayer.position fromLayer:aLayer]];
-	positionAnimation.toValue = [NSValue valueWithCGPoint:position];
+	positionAnimation.fromValue = [NSValue valueWithCGPoint:aLayer.position];
+	positionAnimation.toValue = [NSValue valueWithCGPoint:[aLayer.superlayer convertPoint:position fromLayer:self.layer]];
 	
 	CABasicAnimation *boundsAnimation = [CABasicAnimation animationWithKeyPath:@"bounds"];
 	boundsAnimation.fromValue = [NSValue valueWithCGRect:aLayer.bounds];
 	boundsAnimation.toValue = [NSValue valueWithCGRect:CGRectMake(0.0, 0.0, itemHeight, itemWidth)];
 	
+	CATransition *t = [CATransition animation];
+//	t.type = @"flip";
+	t.type = @"rotate";
+//	t.type = @"rippleEffect";
+	t.subtype = kCATransitionFromLeft;
+	t.duration = 0.25;
+	t.beginTime = CACurrentMediaTime() + 0.1;
+	t.removedOnCompletion = YES;
+		
 	CAAnimationGroup *group = [CAAnimationGroup animation];
-	group.duration = 0.25;
+	group.duration = 0.5;
 	group.animations = [NSArray arrayWithObjects:positionAnimation, boundsAnimation, nil];
 	group.delegate = self;
 	group.fillMode = kCAFillModeForwards;
 	group.removedOnCompletion = NO;
+
 	[aLayer addAnimation:group forKey:@"zoomOut"];		
+	[aLayer addAnimation:t forKey:@"flip"];		
 }
 
 - (void)layoutSubviews
@@ -157,6 +166,8 @@ static CGFloat itemWidth = 80.0;
 	}
 	self.contentSize = CGSizeMake(self.bounds.size.width, rows * (itemHeight + 20.0) + 20.0);
 	
+	[CATransaction begin];
+	[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
 	for (ZBGridLayer *aLayer in layers) {
 		if (index != selectedIndex) {
 			NSUInteger indexInRow = index % k;
@@ -169,12 +180,50 @@ static CGFloat itemWidth = 80.0;
 		}		
 		index++;
 	}
+	[CATransaction commit];
+	UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, nil);
 }
+
+
+#pragma =
+
+- (BOOL)isAccessibilityElement
+{
+	return NO;
+}
+
+- (NSInteger)accessibilityElementCount
+{
+	return [layers count];
+}
+
+- (id)accessibilityElementAtIndex:(NSInteger)index
+{
+	ZBGridLayer *aLayer = [layers objectAtIndex:index];
+	aLayer.element.accessibilityFrame = [[UIApplication sharedApplication].keyWindow.layer convertRect:aLayer.bounds fromLayer:aLayer]; 
+	return aLayer.element;
+}
+
+- (NSInteger)indexOfAccessibilityElement:(id)element
+{
+	NSUInteger index = 0;
+	for (ZBGridLayer *aLayer in layers) {
+		if ([aLayer.element isEqual:element]) {
+			return index;
+		}
+		index++;
+	}
+	
+	return NSNotFound;
+}
+
+#pragma -
 
 - (void)setFrame:(CGRect)frame
 {
 	[super setFrame:frame];
 	[self setNeedsLayout];
+	UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, nil);
 }
 
 - (void)setDataSource:(id<ZBGridControlDelegate>)inDataSource

@@ -6,6 +6,7 @@
 {
     [image release];
 	[title release];
+	[element release];
     [super dealloc];
 }
 
@@ -44,6 +45,22 @@
 	return image;
 }
 
+- (void)setView:(UIView *)inVew
+{
+	view = inVew;
+	id tmp = element;
+	element = [[UIAccessibilityElement alloc] initWithAccessibilityContainer:inVew];
+	element.accessibilityTraits = UIAccessibilityTraitButton;
+	[tmp release];
+}
+
+- (UIView *)view
+{
+	return view;
+}
+
 @synthesize title;
+@synthesize element;
+
 
 @end

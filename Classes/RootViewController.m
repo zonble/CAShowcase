@@ -48,22 +48,22 @@
     }
     switch (indexPath.row) {
 		case 0:
-			cell.textLabel.text = @"Basic Animation";
+			cell.textLabel.text = @"1. Basic Animation";
 			break;
 		case 1:
-			cell.textLabel.text = @"Transitions";
+			cell.textLabel.text = @"2. Transitions";
 			break;			
 		case 2:
-			cell.textLabel.text = @"Auto-layout";
+			cell.textLabel.text = @"3. Auto-layout";
 			break;
 		case 3:
-			cell.textLabel.text = @"Tableview";
+			cell.textLabel.text = @"4. Tableview";
 			break;
 		case 4:
-			cell.textLabel.text = @"Fireworks";
+			cell.textLabel.text = @"5. Fireworks";
 			break;
 		case 5:
-			cell.textLabel.text = @"Grid Control";
+			cell.textLabel.text = @"6. Grid Control";
 			break;			
 		default:
 			break;
