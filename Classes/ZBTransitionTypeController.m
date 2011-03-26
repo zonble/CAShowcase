@@ -12,6 +12,7 @@
 {
 	self = [super init];
 	if (self != nil) {
+		// http://iphonedevwiki.net/index.php/CATransition
 		types = [[NSArray alloc] initWithObjects:kCATransitionFade,
 				 kCATransitionMoveIn,
 				 kCATransitionPush,
@@ -29,6 +30,7 @@
 				 @"pageUnCurl",
 				 @"rippleEffect",
 				 @"suckEffect",
+//				 @"tubey",
 //				 @"spewEffect",
 //				 @"genieEffect",
 //				 @"unGenieEffect",

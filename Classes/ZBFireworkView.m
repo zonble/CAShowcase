@@ -10,9 +10,8 @@
 
 - (void)tap:(UIGestureRecognizer *)r
 {
-//	NSLog(@"%s", __PRETTY_FUNCTION__);
 	CGPoint location = [r locationInView:self];
-	CGFloat hue = ((NSInteger)[NSDate timeIntervalSinceReferenceDate] % 10) / (CGFloat)10;
+	CGFloat hue = [NSDate timeIntervalSinceReferenceDate] - floor([NSDate timeIntervalSinceReferenceDate]);
 	ZBFireworkLayer *aLayer = [[[ZBFireworkLayer alloc] initWithHue:hue] autorelease];
 	CGPoint from = CGPointMake(location.x, self.bounds.size.height - 50.0);
 	CGPoint to = CGPointMake(location.x, (self.bounds.size.height - 100.0) * (random() % 100 / (CGFloat) 100));
@@ -56,6 +55,17 @@
 	[msg drawInRect:textFrame withFont:[UIFont boldSystemFontOfSize:18.0] lineBreakMode:UILineBreakModeTailTruncation alignment:UITextAlignmentCenter];
 	
 }
+
+- (BOOL)isAccessibilityElement
+{
+	return YES;
+}
+
+- (NSString *)accessibilityLabel
+{
+	return @"Tap to fire!";
+}
+
 
 
 @end

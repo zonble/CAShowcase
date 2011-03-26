@@ -6,6 +6,7 @@
 #import "ZBAnimateTableViewController.h"
 #import "ZBFireworkViewController.h"
 #import "ZBGridController.h"
+#import "ZBTransformViewController.h"
 
 @implementation RootViewController
 
@@ -36,7 +37,7 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
 {
-    return 7;
+    return 8;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
@@ -69,6 +70,10 @@
 		case 6:
 			cell.textLabel.text = @"7. Grid Control";
 			break;			
+		case 7:
+			cell.textLabel.text = @"8. Transform";
+			break;			
+
 		default:
 			break;
 	}
@@ -118,7 +123,11 @@
 			controller = [[ZBGridController alloc] init];
 		}
 			break;
-			
+		case 7:
+		{
+			controller = [[ZBTransformViewController alloc] init];
+		}
+			break;
 		default:
 			break;
 	}

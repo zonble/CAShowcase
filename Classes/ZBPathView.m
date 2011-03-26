@@ -58,6 +58,7 @@
 	 CGContextRef ctx = UIGraphicsGetCurrentContext();
 	 CGColorSpaceRef rgbColor = CGColorSpaceCreateDeviceRGB();
 	 CGFloat black[4] = {0.0, 0.0, 0.0, 1.0};
+	 CGContextSetLineWidth(ctx, 2.0);
 	 CGContextSetStrokeColorSpace(ctx, rgbColor);
 	 CGContextSetStrokeColor(ctx, black);
 	 CGContextAddPath(ctx, path);	 

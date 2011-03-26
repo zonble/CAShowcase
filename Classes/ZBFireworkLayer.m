@@ -69,6 +69,10 @@
 	animation.fromValue = [NSValue valueWithCGPoint:inFrom];
 	animation.toValue = [NSValue valueWithCGPoint:inTo];
 	animation.delegate = self;
+
+//	animation.autoreverses = YES;
+//	animation.repeatCount = 2;
+	
 	[self addAnimation:animation forKey:@"move"];
 }
 

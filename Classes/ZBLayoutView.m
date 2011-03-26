@@ -13,6 +13,7 @@
 
 - (void)_init
 {
+	radius = 80.0;
 	self.backgroundColor = [UIColor blackColor];
 	layers = [[NSMutableArray alloc] init];
 	NSUInteger count = 24;
@@ -45,6 +46,17 @@
 
 - (void)timerMethod:(NSTimer *)t
 {
+	if (animationFlag) {
+		if ((radius += 5) > 100) {
+			animationFlag = NO;
+		}			
+	}
+	else {
+		if ((radius -= 5) < 60) {
+			animationFlag = YES;
+		}
+	}
+		
 	if (++rotateIndex >= [layers count]) {
 		rotateIndex = 0;
 	}
@@ -61,7 +73,6 @@
 		CGPoint p = [self.currentTouch locationInView:self];
 		NSUInteger index = rotateIndex;
 		for (ZBLayoutLayer *aLayer in layers) {
-			CGFloat radius = 80.0;
 			CGFloat r = M_PI * 2 * index / [layers count];
 			CGFloat x = p.x + cos(r) * radius * -1;
 			CGFloat y = p.y + sin(r) * radius * -1;
@@ -70,6 +81,8 @@
 		}
 		return;
 	}
+	
+	radius = 80.0;
 	
 	if (rotateTimer) {
 		rotateIndex = 0;
@@ -98,19 +111,19 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-	NSLog(@"%s", __PRETTY_FUNCTION__);
+//	NSLog(@"%s", __PRETTY_FUNCTION__);
 	self.currentTouch = [[touches allObjects] lastObject];
 	[self setNeedsLayout];
 }
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-	NSLog(@"%s", __PRETTY_FUNCTION__);
+//	NSLog(@"%s", __PRETTY_FUNCTION__);
 	self.currentTouch = [[touches allObjects] lastObject];
 	[self setNeedsLayout];
 }
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-	NSLog(@"%s", __PRETTY_FUNCTION__);
+//	NSLog(@"%s", __PRETTY_FUNCTION__);
 	self.currentTouch = nil;
 	[self setNeedsLayout];
 }

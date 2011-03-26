@@ -103,7 +103,6 @@
 	UIImage *image = [UIImage imageNamed:[images objectAtIndex:inIndex]];
 	imageViewController.image = image;
 	imageViewController.title = [images objectAtIndex:inIndex];
-	imageNavController.view.frame = self.navigationController.view.frame;
 	UIImage *screenshot = [imageNavController.view screenshot];
 	
 	self.transitionLayer = (ZBGridLayer *)inLayer;

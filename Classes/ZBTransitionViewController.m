@@ -66,6 +66,9 @@
 	self.imageView = [[[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.bounds.size.width, self.view.bounds.size.height - 160.0)] autorelease];
 	self.imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	[self.view addSubview:self.imageView];
+	[self.imageView setIsAccessibilityElement:YES];
+	[self.imageView setAccessibilityLabel:@"Image"];
+	[self.imageView setAccessibilityTraits:UIAccessibilityTraitImage];
 	
 	self.doAnimationButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 	self.doAnimationButton.frame = CGRectMake(10.0, self.view.bounds.size.height - 145.0, self.view.bounds.size.width - 20.0, 40.0);
@@ -79,12 +82,14 @@
 	self.selectTypeButton.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
 	[self.selectTypeButton addTarget:self action:@selector(selectType:) forControlEvents:UIControlEventTouchUpInside];
 	[self.view addSubview:self.selectTypeButton];
+	[self.selectTypeButton setAccessibilityHint:@"Double-tap to change type."];
 
 	self.selectSubtypeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 	self.selectSubtypeButton.frame = CGRectMake(10.0, self.view.bounds.size.height - 55.0, self.view.bounds.size.width - 20.0, 40.0);
 	self.selectSubtypeButton.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
 	[self.selectSubtypeButton addTarget:self action:@selector(selectSubtype:) forControlEvents:UIControlEventTouchUpInside];
 	[self.view addSubview:self.selectSubtypeButton];
+	[self.selectSubtypeButton setAccessibilityHint:@"Double-tap to change subtype."];
 }
 - (void)viewDidLoad 
 {
@@ -156,12 +161,8 @@
 		t.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
 	}
 
-//	CAFilter* filter = [CAFilter filterWithName:typeController.selectedType];
-//	t.filter = filter;
-	
 	self.imageView.layer.contents = (id)[UIImage imageNamed:[images objectAtIndex:imageIndex]].CGImage;
 	if (settingController.useFullView) {
-//		[self.view.layer addAnimation:t forKey:@"Transition"];
 		[self.navigationController.view.layer addAnimation:t forKey:@"Transition"];
 	}
 	else {

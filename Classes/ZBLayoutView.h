@@ -7,6 +7,9 @@
 	UITouch *currentTouch;
 	NSTimer *rotateTimer;
 	NSUInteger rotateIndex;
+
+	CGFloat radius;
+	BOOL animationFlag;
 }
 
 @property (retain, nonatomic) UITouch *currentTouch;
