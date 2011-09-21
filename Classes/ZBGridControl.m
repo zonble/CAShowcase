@@ -75,7 +75,7 @@ static CGFloat itemWidth = 80.0;
 	NSUInteger count = [dataSource numberOfItemsInGridControl:self];
 	for (NSUInteger index = 0; index < count; index++) {
 		ZBGridLayer *aLayer = [ZBGridLayer layer];
-		aLayer.bounds = CGRectMake(0.0, 0.0, itemHeight, itemWidth);
+		aLayer.bounds = CGRectMake(0.0, 0.0, itemWidth, itemHeight);
 		aLayer.view = self;
 		aLayer.image = [dataSource imageForItemInGridControl:self atIndex:index];
 		aLayer.title = @"An Image";
@@ -120,7 +120,7 @@ static CGFloat itemWidth = 80.0;
 	
 	CABasicAnimation *boundsAnimation = [CABasicAnimation animationWithKeyPath:@"bounds"];
 	boundsAnimation.fromValue = [NSValue valueWithCGRect:aLayer.bounds];
-	boundsAnimation.toValue = [NSValue valueWithCGRect:CGRectMake(0.0, 0.0, itemHeight, itemWidth)];
+	boundsAnimation.toValue = [NSValue valueWithCGRect:CGRectMake(0.0, 0.0, itemWidth, itemHeight)];
 	
 	CATransition *t = [CATransition animation];
 	t.type = @"flip";
@@ -163,7 +163,7 @@ static CGFloat itemWidth = 80.0;
 		if (index != selectedIndex) {
 			NSUInteger indexInRow = index % k;
 			NSUInteger row = index / k;
-			aLayer.bounds = CGRectMake(0.0, 0.0, itemHeight, itemWidth);
+			aLayer.bounds = CGRectMake(0.0, 0.0, itemWidth, itemHeight);
 			aLayer.position = CGPointMake(border + (indexInRow) * ((self.bounds.size.width - border * 2) / (k - 1)) , ((row + 0.5) * (itemHeight + 20.0)) + 10.0);
 			if ([aLayer superlayer] != self.layer) {
 				[self.layer addSublayer:aLayer];
