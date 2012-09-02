@@ -13,6 +13,9 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */; };
 		28C286E10D94DF7D0034E888 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C286E00D94DF7D0034E888 /* RootViewController.m */; };
+		D43A858E15F3A026002B73B0 /* ZBInvertedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43A858D15F3A013002B73B0 /* ZBInvertedViewController.m */; };
+		D43A859115F3A227002B73B0 /* ZBInvertedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D43A858F15F3A227002B73B0 /* ZBInvertedViewController.xib */; };
+		D43A859315F3A310002B73B0 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D43A859215F3A310002B73B0 /* CoreImage.framework */; };
 		D43D6931133D04F0000B3FDB /* ZBPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43D6930133D04F0000B3FDB /* ZBPathViewController.m */; };
 		D43D6934133D052E000B3FDB /* ZBPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = D43D6933133D052E000B3FDB /* ZBPathView.m */; };
 		D43D6941133E1296000B3FDB /* ZBTransformViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D43D6940133E1296000B3FDB /* ZBTransformViewController.m */; };
@@ -63,6 +66,10 @@
 		28C286E00D94DF7D0034E888 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* CAShowcase-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CAShowcase-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		D43A858C15F3A013002B73B0 /* ZBInvertedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZBInvertedViewController.h; sourceTree = "<group>"; };
+		D43A858D15F3A013002B73B0 /* ZBInvertedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZBInvertedViewController.m; sourceTree = "<group>"; };
+		D43A859015F3A227002B73B0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ZBInvertedViewController.xib; sourceTree = "<group>"; };
+		D43A859215F3A310002B73B0 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		D43D692F133D04F0000B3FDB /* ZBPathViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBPathViewController.h; sourceTree = "<group>"; };
 		D43D6930133D04F0000B3FDB /* ZBPathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBPathViewController.m; sourceTree = "<group>"; };
 		D43D6932133D052E000B3FDB /* ZBPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBPathView.h; sourceTree = "<group>"; };
@@ -127,6 +134,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D43A859315F3A310002B73B0 /* CoreImage.framework in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				2892E4100DC94CBA00A64D0F /* CoreGraphics.framework in Frameworks */,
@@ -140,6 +148,7 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D43A858915F39FEF002B73B0 /* Inverted View */,
 				D43D693D133E1262000B3FDB /* Transform */,
 				D43D692D133D04C0000B3FDB /* Path */,
 				D4F889E3133B27DA00F536FB /* Grid Control */,
@@ -188,6 +197,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D43A858F15F3A227002B73B0 /* ZBInvertedViewController.xib */,
 				D447B097133A5F71007CB4EC /* Images */,
 				8D1107310486CEB800E47090 /* CAShowcase-Info.plist */,
 			);
@@ -197,12 +207,22 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D43A859215F3A310002B73B0 /* CoreImage.framework */,
 				D447B0AB133A5F8A007CB4EC /* QuartzCore.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				2892E40F0DC94CBA00A64D0F /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D43A858915F39FEF002B73B0 /* Inverted View */ = {
+			isa = PBXGroup;
+			children = (
+				D43A858C15F3A013002B73B0 /* ZBInvertedViewController.h */,
+				D43A858D15F3A013002B73B0 /* ZBInvertedViewController.m */,
+			);
+			name = "Inverted View";
 			sourceTree = "<group>";
 		};
 		D43D692D133D04C0000B3FDB /* Path */ = {
@@ -404,6 +424,7 @@
 				D447B14D133A696F007CB4EC /* bike4.jpg in Resources */,
 				D447B14E133A696F007CB4EC /* bike5.jpg in Resources */,
 				D4F889E1133B24E600F536FB /* stars.jpg in Resources */,
+				D43A859115F3A227002B73B0 /* ZBInvertedViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,10 +459,22 @@
 				D43D6931133D04F0000B3FDB /* ZBPathViewController.m in Sources */,
 				D43D6934133D052E000B3FDB /* ZBPathView.m in Sources */,
 				D43D6941133E1296000B3FDB /* ZBTransformViewController.m in Sources */,
+				D43A858E15F3A026002B73B0 /* ZBInvertedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D43A858F15F3A227002B73B0 /* ZBInvertedViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D43A859015F3A227002B73B0 /* en */,
+			);
+			name = ZBInvertedViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
