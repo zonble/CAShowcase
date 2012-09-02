@@ -53,7 +53,7 @@
 }
 - (IBAction)close:(id)sender
 {
-	[self.navigationController.parentViewController dismissModalViewControllerAnimated:YES];
+	[self.navigationController.presentingViewController dismissModalViewControllerAnimated:YES];
 }
 
 #pragma mark Table view methods
