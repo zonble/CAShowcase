@@ -23,12 +23,6 @@
 - (void)dealloc 
 {
 	[self removeOutletsAndControls_ZBTransitionViewController];
-	[images release];
-	[typeController release];
-	[subtypeController release];
-	[settingController release];
-	[settingNavController release];
-	[super dealloc];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,11 +38,11 @@
 	return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (id) init
+- (instancetype) init
 {
 	self = [super init];
 	if (self != nil) {
-		images = [[NSArray alloc] initWithObjects:@"bike1.jpg", @"bike2.jpg", @"bike3.jpg", @"bike4.jpg", @"bike5.jpg", nil];
+		images = @[@"bike1.jpg", @"bike2.jpg", @"bike3.jpg", @"bike4.jpg", @"bike5.jpg"];
 	}
 	return self;
 }
@@ -59,16 +53,16 @@
 
 - (void)loadView 
 {
-	self.view = [[[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds] autorelease];
+	self.view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 	self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	self.view.backgroundColor = [UIColor blackColor];
 	
-	self.imageView = [[[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.bounds.size.width, self.view.bounds.size.height - 160.0)] autorelease];
+	self.imageView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.bounds.size.width, self.view.bounds.size.height - 160.0)];
 	self.imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	[self.view addSubview:self.imageView];
 	[self.imageView setIsAccessibilityElement:YES];
-	[self.imageView setAccessibilityLabel:@"Image"];
-	[self.imageView setAccessibilityTraits:UIAccessibilityTraitImage];
+	(self.imageView).accessibilityLabel = @"Image";
+	(self.imageView).accessibilityTraits = UIAccessibilityTraitImage;
 	
 	self.doAnimationButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 	self.doAnimationButton.frame = CGRectMake(10.0, self.view.bounds.size.height - 145.0, self.view.bounds.size.width - 20.0, 40.0);
@@ -82,14 +76,14 @@
 	self.selectTypeButton.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
 	[self.selectTypeButton addTarget:self action:@selector(selectType:) forControlEvents:UIControlEventTouchUpInside];
 	[self.view addSubview:self.selectTypeButton];
-	[self.selectTypeButton setAccessibilityHint:@"Double-tap to change type."];
+	(self.selectTypeButton).accessibilityHint = @"Double-tap to change type.";
 
 	self.selectSubtypeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
 	self.selectSubtypeButton.frame = CGRectMake(10.0, self.view.bounds.size.height - 55.0, self.view.bounds.size.width - 20.0, 40.0);
 	self.selectSubtypeButton.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
 	[self.selectSubtypeButton addTarget:self action:@selector(selectSubtype:) forControlEvents:UIControlEventTouchUpInside];
 	[self.view addSubview:self.selectSubtypeButton];
-	[self.selectSubtypeButton setAccessibilityHint:@"Double-tap to change subtype."];
+	(self.selectSubtypeButton).accessibilityHint = @"Double-tap to change subtype.";
 }
 - (void)viewDidLoad 
 {
@@ -117,9 +111,8 @@
 	}
 	UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Settings" style:UIBarButtonItemStyleBordered target:self action:@selector(showSettings:)];
 	self.navigationItem.rightBarButtonItem = item;
-	[item release];
 	
-	self.imageView.layer.contents = (id)[UIImage imageNamed:[images objectAtIndex:imageIndex]].CGImage;
+	self.imageView.layer.contents = (id)[UIImage imageNamed:images[imageIndex]].CGImage;
 	
 }
 - (void)viewWillAppear:(BOOL)animated 
@@ -149,7 +142,7 @@
 
 - (IBAction)doAnimation:(id)sender
 {
-	if (++imageIndex >= [images count]) {
+	if (++imageIndex >= images.count) {
 		imageIndex = 0;
 	}
 	CATransition *t = [CATransition animation];
@@ -161,7 +154,7 @@
 		t.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
 	}
 
-	self.imageView.layer.contents = (id)[UIImage imageNamed:[images objectAtIndex:imageIndex]].CGImage;
+	self.imageView.layer.contents = (id)[UIImage imageNamed:images[imageIndex]].CGImage;
 	if (settingController.useFullView) {
 		[self.navigationController.view.layer addAnimation:t forKey:@"Transition"];
 	}

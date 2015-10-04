@@ -5,8 +5,6 @@
 - (void)dealloc
 {
 	CGPathRelease(path);
-	[spot release];
-    [super dealloc];
 }
 
 - (void)_init
@@ -35,7 +33,7 @@
 	
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
 	self = [super initWithCoder:aDecoder];
 	if (self != nil) {
@@ -44,7 +42,7 @@
 	return self;
 }
 
-- (id)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame
 {
 	self = [super initWithFrame:frame];
 	if (self != nil) {

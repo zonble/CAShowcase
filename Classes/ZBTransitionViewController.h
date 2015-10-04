@@ -25,10 +25,10 @@
 - (IBAction)selectSubtype:(id)sender;
 - (IBAction)showSettings:(id)sender;
 
-@property (retain, nonatomic) UIView *imageView;
-@property (retain, nonatomic) UIButton *doAnimationButton;
-@property (retain, nonatomic) UIButton *selectTypeButton;
-@property (retain, nonatomic) UIButton *selectSubtypeButton;
+@property (strong, nonatomic) UIView *imageView;
+@property (strong, nonatomic) UIButton *doAnimationButton;
+@property (strong, nonatomic) UIButton *selectTypeButton;
+@property (strong, nonatomic) UIButton *selectSubtypeButton;
 
 
 @end

@@ -8,9 +8,9 @@
 	UIView *view;
 }
 
-@property (retain, nonatomic) NSString *title;
-@property (retain, nonatomic) UIImage *image;
+@property (strong, nonatomic) NSString *title;
+@property (strong, nonatomic) UIImage *image;
 @property (readonly) UIAccessibilityElement *element;
-@property (assign, nonatomic) UIView *view;
+@property (weak, nonatomic) UIView *view;
 
 @end

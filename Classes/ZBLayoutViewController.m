@@ -2,7 +2,7 @@
 
 @implementation ZBLayoutViewController
 
-- (id)init
+- (instancetype)init
 {
 	self = [super init];
 	if (self != nil) {
@@ -15,7 +15,7 @@
 {
 	ZBLayoutView *aView = [[ZBLayoutView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 	aView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-	self.view = [aView autorelease];
+	self.view = aView;
 }
 
  - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

@@ -11,8 +11,6 @@
 - (void)dealloc 
 {
 	[self removeOutletsAndControls_ZBGridImageViewController];	
-	[image release];
-    [super dealloc];
 }
 - (void)viewDidUnload
 {
@@ -32,7 +30,7 @@
 	imageView.image = self.image;
 	imageView.contentMode = UIViewContentModeScaleAspectFit;
 	imageView.backgroundColor = [UIColor darkGrayColor];
-	self.view = [imageView autorelease];
+	self.view = imageView;
 	
 	label = [[UILabel alloc] initWithFrame:CGRectMake(10.0, self.view.bounds.size.height - 80.0, self.view.bounds.size.width - 20.0, 60.0)];
 	label.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
@@ -50,7 +48,6 @@
 	[super viewDidLoad];
 	UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Close" style:UIBarButtonItemStyleBordered target:self action:@selector(close:)];
 	self.navigationItem.leftBarButtonItem = item;
-	[item release];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -73,8 +70,7 @@
 - (void)setImage:(UIImage *)inImage
 {
 	id tmp = image;
-	image = [inImage retain];
-	[tmp release];
+	image = inImage;
 	
 	if (imageView) {
 		imageView.image = image;

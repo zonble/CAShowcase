@@ -14,7 +14,7 @@
 	ZBGridLayer *transitionLayer;
 }
 
-@property (retain, nonatomic) ZBGridControl *control;
-@property (retain, nonatomic) ZBGridLayer *transitionLayer;
+@property (strong, nonatomic) ZBGridControl *control;
+@property (strong, nonatomic) ZBGridLayer *transitionLayer;
 
 @end

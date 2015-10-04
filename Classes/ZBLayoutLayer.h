@@ -5,6 +5,6 @@
 	UIColor *color;
 }
 
-@property (retain, nonatomic) UIColor *color;
+@property (strong, nonatomic) UIColor *color;
 
 @end

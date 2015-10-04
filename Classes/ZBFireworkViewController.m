@@ -3,7 +3,7 @@
 
 @implementation ZBFireworkViewController
 
-- (id)init 
+- (instancetype)init 
 {
     self = [super init];
     if (self) {
@@ -16,7 +16,7 @@
 {
 	ZBFireworkView *aView = [[ZBFireworkView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 	aView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	self.view = [aView autorelease];
+	self.view = aView;
 }
 
 @end

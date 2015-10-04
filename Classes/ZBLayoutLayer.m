@@ -2,13 +2,8 @@
 
 @implementation ZBLayoutLayer
 
-- (void)dealloc
-{
-	[color release];
-	[super dealloc];
-}
 
-- (id)init
+- (instancetype)init
 {
 	self = [super init];
 	if (self != nil) {
@@ -28,7 +23,7 @@
 
 - (void)setBounds:(CGRect)inBounds
 {
-	[super setBounds:inBounds];
+	super.bounds = inBounds;
 	[self setNeedsDisplay];
 }
 

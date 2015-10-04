@@ -4,14 +4,12 @@
 
 - (void)removeOutletsAndControls_ZBAnimateTableViewController
 {
-	[transitionLayer release];
 	transitionLayer = nil;
 }
 
 - (void)dealloc 
 {
 	[self removeOutletsAndControls_ZBAnimateTableViewController];
-    [super dealloc];
 }
 - (void)viewDidUnload
 {
@@ -19,7 +17,7 @@
 	[self removeOutletsAndControls_ZBAnimateTableViewController];
 }
 
-- (id)init
+- (instancetype)init
 {
 	self = [super init];
 	if (self != nil) {
@@ -59,7 +57,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     cell.textLabel.text = [NSString stringWithFormat:@"Cell %d", indexPath.row];
 	NSString *imageName = [NSString stringWithFormat:@"banana%d.tiff", (indexPath.row % 8 + 1)];
@@ -94,18 +92,18 @@
 	boundsAnimation.toValue = [NSValue valueWithCGRect:CGRectZero];
 
 	CABasicAnimation *opacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-	opacityAnimation.fromValue = [NSNumber numberWithFloat:1.0];
-	opacityAnimation.toValue = [NSNumber numberWithFloat:0.5];	
+	opacityAnimation.fromValue = @1.0f;
+	opacityAnimation.toValue = @0.5f;	
 	
 	CABasicAnimation *rotateAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-	rotateAnimation.fromValue = [NSNumber numberWithFloat:0 * M_PI];
-	rotateAnimation.toValue = [NSNumber numberWithFloat:2 * M_PI];	
+	rotateAnimation.fromValue = @(0 * M_PI);
+	rotateAnimation.toValue = @(2 * M_PI);
 	
 	
 	CAAnimationGroup *group = [CAAnimationGroup animation];
 	group.beginTime = CACurrentMediaTime() + 0.25;
 	group.duration = 0.5;
-	group.animations = [NSArray arrayWithObjects:positionAnimation, boundsAnimation, opacityAnimation, rotateAnimation, nil];
+	group.animations = @[positionAnimation, boundsAnimation, opacityAnimation, rotateAnimation];
 	group.delegate = self;
 	group.fillMode = kCAFillModeForwards;
 	group.removedOnCompletion = NO;

@@ -2,15 +2,8 @@
 
 @implementation ZBGridLayer
 
-- (void)dealloc
-{
-    [image release];
-	[title release];
-	[element release];
-    [super dealloc];
-}
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -35,8 +28,7 @@
 - (void)setImage:(UIImage *)inImage
 {
 	id tmp = image;
-	image = [inImage retain];
-	[tmp release];
+	image = inImage;
 	[self setNeedsDisplay];
 }
 
@@ -51,7 +43,6 @@
 	id tmp = element;
 	element = [[UIAccessibilityElement alloc] initWithAccessibilityContainer:inVew];
 	element.accessibilityTraits = UIAccessibilityTraitButton;
-	[tmp release];
 }
 
 - (UIView *)view

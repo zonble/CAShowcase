@@ -2,21 +2,15 @@
 
 @implementation ZBTransitionSubtypeController
 
-- (void)dealloc 
-{
-	[subtypes release];
-    [super dealloc];
-}
 
-- (id) init
+- (instancetype) init
 {
 	self = [super init];
 	if (self != nil) {
-		subtypes = [[NSArray alloc] initWithObjects:kCATransitionFromRight,
+		subtypes = @[kCATransitionFromRight,
 					kCATransitionFromLeft,
 					kCATransitionFromTop,
-					kCATransitionFromBottom,
-					nil];
+					kCATransitionFromBottom];
 	}
 	return self;
 }
@@ -29,7 +23,7 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return [subtypes count];
+	return subtypes.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -38,9 +32,9 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    NSString *subtype = [subtypes objectAtIndex:indexPath.row];
+    NSString *subtype = subtypes[indexPath.row];
 	cell.textLabel.text = subtype;
 	if (indexPath.row == selectedIndex) {
 		cell.accessoryType = UITableViewCellAccessoryCheckmark;
@@ -60,7 +54,7 @@
 
 - (NSString *)selectedSubtype
 {
-	return [subtypes objectAtIndex:selectedIndex];
+	return subtypes[selectedIndex];
 }
 
 @synthesize delegate;

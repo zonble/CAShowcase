@@ -5,8 +5,8 @@
     UINavigationController *navigationController;
 }
 
-@property (nonatomic, retain) UIWindow *window;
-@property (nonatomic, retain) UINavigationController *navigationController;
+@property (nonatomic, strong) UIWindow *window;
+@property (nonatomic, strong) UINavigationController *navigationController;
 
 @end
 

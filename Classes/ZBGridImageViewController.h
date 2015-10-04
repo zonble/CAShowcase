@@ -10,7 +10,7 @@
 
 @interface ZBGridImageViewController : UIViewController 
 {
-	id <ZBGridImageViewControllerDelegate> delegate;
+	id <ZBGridImageViewControllerDelegate> __weak delegate;
 	UIImageView *imageView;
 	UIImage *image;
 	UILabel *label;
@@ -18,8 +18,8 @@
 
 - (IBAction)close:(id)sender;
 
-@property (assign, nonatomic) id <ZBGridImageViewControllerDelegate> delegate;
-@property (retain, nonatomic) UIImage *image;
-@property (retain, nonatomic) UILabel *label;
+@property (weak, nonatomic) id <ZBGridImageViewControllerDelegate> delegate;
+@property (strong, nonatomic) UIImage *image;
+@property (strong, nonatomic) UILabel *label;
 
 @end

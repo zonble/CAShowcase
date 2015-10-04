@@ -3,7 +3,7 @@
 
 @interface UIView (Screenshot)
 
-- (UIImage *)screenshot;
-- (UIImage *)invertedScreenshot;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) UIImage *screenshot;
+@property (NS_NONATOMIC_IOSONLY, readonly, strong) UIImage *invertedScreenshot;
 
 @end

@@ -11,8 +11,6 @@ static CGFloat itemWidth = 80.0;
 {
 	self.delegate = nil;
 	self.dataSource = nil;
-	[layers release];
-    [super dealloc];
 }
 
 - (void)tap:(UITapGestureRecognizer *)r
@@ -41,10 +39,9 @@ static CGFloat itemWidth = 80.0;
 	selectedIndex = NSNotFound;
 	UITapGestureRecognizer *r = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
 	[self addGestureRecognizer:r];
-	[r release];
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
 	self = [super initWithCoder:aDecoder];
 	if (self != nil) {
@@ -53,7 +50,7 @@ static CGFloat itemWidth = 80.0;
 	return self;
 }
 
-- (id)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame
 {
 	self = [super initWithFrame:frame];
 	if (self != nil) {
@@ -87,7 +84,7 @@ static CGFloat itemWidth = 80.0;
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
 {
-	ZBGridLayer *aLayer = [layers objectAtIndex:selectedIndex];
+	ZBGridLayer *aLayer = layers[selectedIndex];
 	[aLayer removeAllAnimations];
 	[aLayer setNeedsDisplay];
 	[self.layer addSublayer:aLayer];
@@ -98,7 +95,7 @@ static CGFloat itemWidth = 80.0;
 
 - (void)resetSelection
 {
-	ZBGridLayer *aLayer = [layers objectAtIndex:selectedIndex];
+	ZBGridLayer *aLayer = layers[selectedIndex];
 	
 	NSUInteger k = itemsPerRow;
 	CGFloat border = 60.0;
@@ -106,7 +103,7 @@ static CGFloat itemWidth = 80.0;
 		k += 1;
 		border = 80.0;
 	}
-	NSUInteger rows = (NSUInteger)ceilf((float)[layers count] / (float)k);
+	NSUInteger rows = (NSUInteger)ceilf((float)layers.count / (float)k);
 	if (!rows) {
 		rows = 1;
 	}
@@ -133,7 +130,7 @@ static CGFloat itemWidth = 80.0;
 	
 	CAAnimationGroup *group = [CAAnimationGroup animation];
 	group.duration = 0.5;
-	group.animations = [NSArray arrayWithObjects:positionAnimation, boundsAnimation, nil];
+	group.animations = @[positionAnimation, boundsAnimation];
 	group.delegate = self;
 	group.fillMode = kCAFillModeForwards;
 	group.removedOnCompletion = NO;
@@ -151,7 +148,7 @@ static CGFloat itemWidth = 80.0;
 		k += 1;
 		border = 80.0;
 	}
-	NSUInteger rows = (NSUInteger)ceilf((float)[layers count] / (float)k);
+	NSUInteger rows = (NSUInteger)ceilf((float)layers.count / (float)k);
 	if (!rows) {
 		rows = 1;
 	}
@@ -165,7 +162,7 @@ static CGFloat itemWidth = 80.0;
 			NSUInteger row = index / k;
 			aLayer.bounds = CGRectMake(0.0, 0.0, itemWidth, itemHeight);
 			aLayer.position = CGPointMake(border + (indexInRow) * ((self.bounds.size.width - border * 2) / (k - 1)) , ((row + 0.5) * (itemHeight + 20.0)) + 10.0);
-			if ([aLayer superlayer] != self.layer) {
+			if (aLayer.superlayer != self.layer) {
 				[self.layer addSublayer:aLayer];
 			}
 		}		
@@ -185,12 +182,12 @@ static CGFloat itemWidth = 80.0;
 
 - (NSInteger)accessibilityElementCount
 {
-	return [layers count];
+	return layers.count;
 }
 
 - (id)accessibilityElementAtIndex:(NSInteger)index
 {
-	ZBGridLayer *aLayer = [layers objectAtIndex:index];
+	ZBGridLayer *aLayer = layers[index];
 	aLayer.element.accessibilityFrame = [[UIApplication sharedApplication].keyWindow.layer convertRect:aLayer.bounds fromLayer:aLayer]; 
 	return aLayer.element;
 }
@@ -212,7 +209,7 @@ static CGFloat itemWidth = 80.0;
 
 - (void)setFrame:(CGRect)frame
 {
-	[super setFrame:frame];
+	super.frame = frame;
 	[self setNeedsLayout];
 	UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, nil);
 }

@@ -2,7 +2,7 @@
 
 @implementation ZBPathViewController
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
@@ -14,7 +14,7 @@
 {
 	ZBPathView *pathView = [[ZBPathView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 	pathView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	self.view = [pathView autorelease];
+	self.view = pathView;
 }
 
 @end

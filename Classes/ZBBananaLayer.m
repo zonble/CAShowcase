@@ -11,9 +11,6 @@
 - (void)dealloc
 {
 	[animationTimer invalidate];
-	[animationTimer release];
-	[images release];
-	[super dealloc];
 }
 
 - (void)timer:(NSTimer *)timer
@@ -27,28 +24,28 @@
 	}
 	
 	imageIndex++;
-	if (imageIndex >= [images count]) {
+	if (imageIndex >= images.count) {
 		imageIndex = 0;
 	}
-	UIImage *image = [images objectAtIndex:imageIndex];
+	UIImage *image = images[imageIndex];
 	self.contents = (id)image.CGImage;
 }
 
-- (id)init
+- (instancetype)init
 {
 	self = [super init];
 	if (self != nil) {
-		images = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"banana1.tiff"],
+		images = @[[UIImage imageNamed:@"banana1.tiff"],
 				  [UIImage imageNamed:@"banana2.tiff"],
 				  [UIImage imageNamed:@"banana3.tiff"],
 				  [UIImage imageNamed:@"banana4.tiff"],
 				  [UIImage imageNamed:@"banana5.tiff"],
 				  [UIImage imageNamed:@"banana6.tiff"],
 				  [UIImage imageNamed:@"banana7.tiff"],
-				  [UIImage imageNamed:@"banana8.tiff"], nil];
-		UIImage *firstImage = [images objectAtIndex:0];
+				  [UIImage imageNamed:@"banana8.tiff"]];
+		UIImage *firstImage = images[0];
 		self.contents = (id)firstImage.CGImage;
-		animationTimer = [[NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timer:) userInfo:nil repeats:YES] retain];
+		animationTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timer:) userInfo:nil repeats:YES];
 	}
 	return self;
 }

@@ -8,13 +8,13 @@
 
 @interface ZBTransitionSubtypeController : UITableViewController 
 {
-	id <ZBTransitionSubtypeControllerDelegate> delegate;
+	id <ZBTransitionSubtypeControllerDelegate> __weak delegate;
 	NSArray *subtypes;
 	NSUInteger selectedIndex;	
 }
 
-@property (assign) id <ZBTransitionSubtypeControllerDelegate> delegate;
-@property (readonly) NSString *selectedSubtype;
+@property (weak) id <ZBTransitionSubtypeControllerDelegate> delegate;
+@property (weak, readonly) NSString *selectedSubtype;
 
 
 @end

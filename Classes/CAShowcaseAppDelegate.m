@@ -4,21 +4,15 @@
 
 @implementation CAShowcaseAppDelegate
 
-- (void)dealloc 
-{
-	[navigationController release];
-	[window release];
-	[super dealloc];
-}
 
 #pragma mark -
 #pragma mark Application lifecycle
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions 
 {
-	self.window = [[[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds] autorelease];
+	self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 	RootViewController *controller = [[RootViewController alloc] initWithStyle:UITableViewStylePlain];
-	self.navigationController = [[[UINavigationController alloc] initWithRootViewController:controller] autorelease];	
+	self.navigationController = [[UINavigationController alloc] initWithRootViewController:controller];	
     [self.window addSubview:navigationController.view];
     [self.window makeKeyAndVisible];
     return YES;

@@ -4,16 +4,13 @@
 
 - (void)removeOutletsAndControls_ZBTransitionSettingsTableViewController
 {
-	[useFullViewSwitch release];
 	useFullViewSwitch = nil;
-	[useLongerAnimationDurationSwitch release];
 	useLongerAnimationDurationSwitch = nil;
 }
 
 - (void)dealloc 
 {
 	[self removeOutletsAndControls_ZBTransitionSettingsTableViewController];
-    [super dealloc];
 }
 - (void)viewDidUnload
 {
@@ -37,7 +34,6 @@
 	}
 	UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(close:)];
 	self.navigationItem.leftBarButtonItem = item;
-	[item release];
 }
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -73,7 +69,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
 	cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	switch (indexPath.row) {

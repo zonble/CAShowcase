@@ -5,14 +5,12 @@
 - (void)removeOutletsAndControls_BananaViewController
 {
     // remove and clean outlets and controls here
-	[bananaLayer release];
 	bananaLayer = nil;
 }
 
 - (void)dealloc 
 {
 	[self removeOutletsAndControls_BananaViewController];
-    [super dealloc];
 }
 - (void)viewDidUnload
 {
@@ -29,7 +27,6 @@
 	aView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	aView.backgroundColor = [UIColor lightGrayColor];
 	self.view = aView;
-	[aView release];
 }
 - (void)viewDidLoad 
 {
@@ -78,20 +75,20 @@
 	animation.toValue = [NSValue valueWithCGPoint:toPoint];
 	
 	CABasicAnimation *rotateAnimation  = [CABasicAnimation animationWithKeyPath:@"transform.rotation.y"];
-	rotateAnimation.fromValue = [NSNumber numberWithFloat:0.0];
-	rotateAnimation.toValue = [NSNumber numberWithFloat:1.0 * M_PI];
+	rotateAnimation.fromValue = @0.0f;
+	rotateAnimation.toValue = @(1.0 * M_PI);
 
 	CABasicAnimation *scaoleAnimation  = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
 	scaoleAnimation.duration = 0.5;
 	scaoleAnimation.autoreverses = YES;
-	scaoleAnimation.fromValue = [NSNumber numberWithFloat:1.0];
-	scaoleAnimation.toValue = [NSNumber numberWithFloat:1.5];
+	scaoleAnimation.fromValue = @1.0;
+	scaoleAnimation.toValue = @1.5;
 	
 	
 	CAAnimationGroup *group = [CAAnimationGroup animation];
 	group.autoreverses = YES;
 	group.duration = 1.0;
-	group.animations = [NSArray arrayWithObjects:animation, scaoleAnimation, nil];
+	group.animations = @[animation, scaoleAnimation];
 	group.repeatCount = NSNotFound;
 	
 	[bananaLayer addAnimation:group forKey:@"move"];

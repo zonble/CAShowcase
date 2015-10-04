@@ -19,7 +19,7 @@
 - (void)reloadData;
 - (void)resetSelection;
 
-@property (assign, nonatomic) id <ZBGridControlDelegate> dataSource;
+@property (weak, nonatomic) id <ZBGridControlDelegate> dataSource;
 @property (readonly) NSUInteger selectedIndex;
 
 @end

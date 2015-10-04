@@ -10,7 +10,7 @@
 
 #pragma mark - View lifecycle
 
-- (id)init
+- (instancetype)init
 {
     self = [super initWithNibName:NSStringFromClass([ZBInvertedViewController class]) bundle:[NSBundle mainBundle]];
     if (self) {

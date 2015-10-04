@@ -4,11 +4,7 @@
 
 - (void)dealloc 
 {
-	[currentTouch release];
 	[rotateTimer invalidate];
-	[rotateTimer release];
-	[layers release];
-    [super dealloc];
 }
 
 - (void)_init
@@ -26,7 +22,7 @@
 	[self setNeedsLayout];
 }
 
-- (id)initWithCoder:(NSCoder *)aDecoder
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
 {
 	self = [super initWithCoder:aDecoder];
 	if (self != nil) {
@@ -35,7 +31,7 @@
 	return self;
 }
 
-- (id)initWithFrame:(CGRect)frame
+- (instancetype)initWithFrame:(CGRect)frame
 {
 	self = [super initWithFrame:frame];
 	if (self != nil) {
@@ -57,7 +53,7 @@
 		}
 	}
 		
-	if (++rotateIndex >= [layers count]) {
+	if (++rotateIndex >= layers.count) {
 		rotateIndex = 0;
 	}
 	[self setNeedsLayout];
@@ -67,13 +63,13 @@
 {
 	if (self.currentTouch) {
 		if (!rotateTimer) {
-			rotateTimer = [[NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerMethod:) userInfo:nil repeats:YES] retain];
+			rotateTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(timerMethod:) userInfo:nil repeats:YES];
 		}
 		
 		CGPoint p = [self.currentTouch locationInView:self];
 		NSUInteger index = rotateIndex;
 		for (ZBLayoutLayer *aLayer in layers) {
-			CGFloat r = M_PI * 2 * index / [layers count];
+			CGFloat r = M_PI * 2 * index / layers.count;
 			CGFloat x = p.x + cos(r) * radius * -1;
 			CGFloat y = p.y + sin(r) * radius * -1;
 			aLayer.position = CGPointMake(x, y);
@@ -87,13 +83,12 @@
 	if (rotateTimer) {
 		rotateIndex = 0;
 		[rotateTimer invalidate];
-		[rotateTimer release];
 		rotateTimer = nil;
 	}
 	
 	NSUInteger index = 0;
 	NSUInteger itemsPerRow = 4;
-	NSUInteger rows = (NSUInteger)ceilf((float)[layers count] / (float)itemsPerRow);
+	NSUInteger rows = (NSUInteger)ceilf((float)layers.count / (float)itemsPerRow);
 	if (!rows) {
 		rows = 1;
 	}
@@ -102,7 +97,7 @@
 		NSUInteger row = index / itemsPerRow;
 		aLayer.position = CGPointMake((indexInRow + 1) * (self.bounds.size.width / (itemsPerRow  + 1)) ,
 									  (row + 1) * (self.bounds.size.height / (rows +1)));
-		if (![aLayer superlayer]) {
+		if (!aLayer.superlayer) {
 			[self.layer addSublayer:aLayer];
 		}
 		index++;
@@ -112,13 +107,13 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
 //	NSLog(@"%s", __PRETTY_FUNCTION__);
-	self.currentTouch = [[touches allObjects] lastObject];
+	self.currentTouch = touches.allObjects.lastObject;
 	[self setNeedsLayout];
 }
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
 //	NSLog(@"%s", __PRETTY_FUNCTION__);
-	self.currentTouch = [[touches allObjects] lastObject];
+	self.currentTouch = touches.allObjects.lastObject;
 	[self setNeedsLayout];
 }
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event

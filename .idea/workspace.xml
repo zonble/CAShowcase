@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7dbd3f86-3527-4b99-aa41-fc78d43876e6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/CAShowcaseAppDelegate.h" afterPath="$PROJECT_DIR$/Classes/CAShowcaseAppDelegate.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/CAShowcaseAppDelegate.m" afterPath="$PROJECT_DIR$/Classes/CAShowcaseAppDelegate.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/RootViewController.m" afterPath="$PROJECT_DIR$/Classes/RootViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBAnimateTableViewController.m" afterPath="$PROJECT_DIR$/Classes/ZBAnimateTableViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBBananaLayer.m" afterPath="$PROJECT_DIR$/Classes/ZBBananaLayer.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBBananaViewController.m" afterPath="$PROJECT_DIR$/Classes/ZBBananaViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBFireworkView.m" afterPath="$PROJECT_DIR$/Classes/ZBFireworkView.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBFireworkViewController.m" afterPath="$PROJECT_DIR$/Classes/ZBFireworkViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBGridControl.h" afterPath="$PROJECT_DIR$/Classes/ZBGridControl.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBGridControl.m" afterPath="$PROJECT_DIR$/Classes/ZBGridControl.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBGridController.h" afterPath="$PROJECT_DIR$/Classes/ZBGridController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBGridController.m" afterPath="$PROJECT_DIR$/Classes/ZBGridController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBGridImageViewController.h" afterPath="$PROJECT_DIR$/Classes/ZBGridImageViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBGridImageViewController.m" afterPath="$PROJECT_DIR$/Classes/ZBGridImageViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBGridLayer.h" afterPath="$PROJECT_DIR$/Classes/ZBGridLayer.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBGridLayer.m" afterPath="$PROJECT_DIR$/Classes/ZBGridLayer.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBLayoutLayer.h" afterPath="$PROJECT_DIR$/Classes/ZBLayoutLayer.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBLayoutLayer.m" afterPath="$PROJECT_DIR$/Classes/ZBLayoutLayer.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBLayoutView.h" afterPath="$PROJECT_DIR$/Classes/ZBLayoutView.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBLayoutView.m" afterPath="$PROJECT_DIR$/Classes/ZBLayoutView.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBLayoutViewController.m" afterPath="$PROJECT_DIR$/Classes/ZBLayoutViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBPathView.m" afterPath="$PROJECT_DIR$/Classes/ZBPathView.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBPathViewController.m" afterPath="$PROJECT_DIR$/Classes/ZBPathViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBTransformViewController.m" afterPath="$PROJECT_DIR$/Classes/ZBTransformViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBTransitionSettingsTableViewController.m" afterPath="$PROJECT_DIR$/Classes/ZBTransitionSettingsTableViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBTransitionSubtypeController.h" afterPath="$PROJECT_DIR$/Classes/ZBTransitionSubtypeController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBTransitionSubtypeController.m" afterPath="$PROJECT_DIR$/Classes/ZBTransitionSubtypeController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBTransitionTypeController.h" afterPath="$PROJECT_DIR$/Classes/ZBTransitionTypeController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBTransitionTypeController.m" afterPath="$PROJECT_DIR$/Classes/ZBTransitionTypeController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBTransitionViewController.h" afterPath="$PROJECT_DIR$/Classes/ZBTransitionViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBTransitionViewController.m" afterPath="$PROJECT_DIR$/Classes/ZBTransitionViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.m" afterPath="$PROJECT_DIR$/main.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CAShowcase.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/CAShowcase.xcodeproj/project.pbxproj" />
+    </list>
+    <ignored path="CAShowcase.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_33e35055a43ed34590865c807c6b6a2838d7257d" />
+  <component name="FavoritesManager">
+    <favorites_list name="CAShowcase" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="ZBGridController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classes/ZBGridController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+                <marker date="1443969029000" expanded="true" signature="229:522" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZBPathView.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classes/ZBPathView.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZBPathView.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classes/ZBPathView.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1443969029000" expanded="true" signature="50:1682" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZBPathViewController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classes/ZBPathViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZBPathViewController.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classes/ZBPathViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+              <folding>
+                <marker date="1443969029000" expanded="true" signature="70:428" placeholder="..." />
+                <marker date="1443969029000" expanded="true" signature="423:426" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZBAnimateTableViewController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classes/ZBAnimateTableViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding>
+                <marker date="1443968888000" expanded="true" signature="130:132" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZBAnimateTableViewController.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classes/ZBAnimateTableViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZBTransformViewController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classes/ZBTransformViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZBTransformViewController.m" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Classes/ZBTransformViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.65301204">
+              <caret line="79" column="41" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Classes/ZBBananaLayer.m" />
+        <option value="$PROJECT_DIR$/Classes/ZBBananaLayer.h" />
+        <option value="$PROJECT_DIR$/Classes/ZBBananaViewController.h" />
+        <option value="$PROJECT_DIR$/Classes/ZBBananaViewController.m" />
+        <option value="$PROJECT_DIR$/Classes/ZBFireworkLayer.h" />
+        <option value="$PROJECT_DIR$/Classes/ZBFireworkLayer.m" />
+        <option value="$PROJECT_DIR$/Classes/ZBFireworkView.m" />
+        <option value="$PROJECT_DIR$/Classes/ZBFireworkViewController.h" />
+        <option value="$PROJECT_DIR$/Classes/ZBFireworkViewController.m" />
+        <option value="$PROJECT_DIR$/Classes/UIView+Screenshot.h" />
+        <option value="$PROJECT_DIR$/Classes/UIView+Screenshot.m" />
+        <option value="$PROJECT_DIR$/Classes/ZBGridControl.h" />
+        <option value="$PROJECT_DIR$/Classes/ZBGridControl.m" />
+        <option value="$PROJECT_DIR$/Classes/ZBPathView.h" />
+        <option value="$PROJECT_DIR$/Classes/ZBPathView.m" />
+        <option value="$PROJECT_DIR$/Classes/ZBPathViewController.h" />
+        <option value="$PROJECT_DIR$/Classes/ZBPathViewController.m" />
+        <option value="$PROJECT_DIR$/Classes/ZBAnimateTableViewController.h" />
+        <option value="$PROJECT_DIR$/Classes/ZBAnimateTableViewController.m" />
+        <option value="$PROJECT_DIR$/Classes/ZBTransformViewController.h" />
+        <option value="$PROJECT_DIR$/Classes/ZBTransformViewController.m" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="48" />
+    <option name="y" value="44" />
+    <option name="width" value="1476" />
+    <option name="height" value="948" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAShowcase" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAShowcase" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Classes" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAShowcase" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Classes" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Transform" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAShowcase" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Classes" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Table view" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAShowcase" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Classes" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Path" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAShowcase" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Classes" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Grid Control" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAShowcase" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Classes" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Firework" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Cidr.FilesView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="recentsLimit" value="5" />
+  </component>
+  <component name="RunManager" selected="Application.CAShowcase">
+    <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="CAShowcase" TARGET_NAME="CAShowcase" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="CAShowcase" RUN_TARGET_NAME="CAShowcase" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="false" name="CAShowcase" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="CAShowcase" TARGET_NAME="CAShowcase" CONFIG_NAME="Debug" SCHEME_NAME="CAShowcase" RUN_TARGET_PROJECT_NAME="CAShowcase" RUN_TARGET_NAME="CAShowcase" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
+        <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
+      </EXTENSION>
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Application.CAShowcase" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7dbd3f86-3527-4b99-aa41-fc78d43876e6" name="Default" comment="" />
+      <created>1443968207110</created>
+      <option name="number" value="Default" />
+      <updated>1443968207110</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="48" y="44" width="1476" height="948" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24948454" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Classes/ZBBananaLayer.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBBananaViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21927711">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBBananaViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13012049">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBBananaLayer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBFireworkLayer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#33#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBFireworkLayer.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="71" column="4" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBFireworkView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBFireworkViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBFireworkViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#36#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/UIView+Screenshot.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/UIView+Screenshot.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBGridControl.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBGridControl.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#25#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBGridController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+            <marker date="1443969029000" expanded="true" signature="229:522" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBPathView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBPathView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1443969029000" expanded="true" signature="50:1682" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBPathViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBPathViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding>
+            <marker date="1443969029000" expanded="true" signature="70:428" placeholder="..." />
+            <marker date="1443969029000" expanded="true" signature="423:426" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBAnimateTableViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <marker date="1443968888000" expanded="true" signature="130:132" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBAnimateTableViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBTransformViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/CAShowcaseAppDelegate.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10843374">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBTransformViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65301204">
+          <caret line="79" column="41" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

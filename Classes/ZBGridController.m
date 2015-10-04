@@ -12,9 +12,6 @@
 - (void)dealloc 
 {
 	[self removeOutletsAndControls_ZBGridController];
-	[transitionLayer release];
-	[images release];
-    [super dealloc];
 }
 - (void)viewDidUnload
 {
@@ -34,15 +31,15 @@
 
 #pragma mark - View lifecycle
 
-- (id)init 
+- (instancetype)init 
 {
     self = [super init];
     if (self) {
 		self.title = @"Grid Control";
-		images = [[NSArray alloc] initWithObjects:@"bike1.jpg", @"bike2.jpg", @"bike3.jpg", @"bike4.jpg", @"bike5.jpg",
+		images = @[@"bike1.jpg", @"bike2.jpg", @"bike3.jpg", @"bike4.jpg", @"bike5.jpg",
 				  @"bike1.jpg", @"bike2.jpg", @"bike3.jpg", @"bike4.jpg", @"bike5.jpg",
 				  @"bike1.jpg", @"bike2.jpg", @"bike3.jpg", @"bike4.jpg", @"bike5.jpg",
-				  @"bike1.jpg", @"bike2.jpg", @"bike3.jpg", @"bike4.jpg", @"bike5.jpg", nil];
+				  @"bike1.jpg", @"bike2.jpg", @"bike3.jpg", @"bike4.jpg", @"bike5.jpg"];
 		imageViewController = [[ZBGridImageViewController alloc] init];
 		imageViewController.delegate = self;
 		imageNavController = [[UINavigationController alloc] initWithRootViewController:imageViewController];
@@ -61,11 +58,11 @@
 {
 	UIView *aView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 	aView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	self.view = [aView autorelease];
+	self.view = aView;
 	
 	ZBGridControl *aControl = [[ZBGridControl alloc] initWithFrame:aView.bounds];
 	aControl.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-	self.control = [aControl autorelease];
+	self.control = aControl;
 	[self.view addSubview:self.control];
 	self.control.dataSource = self;
 }
@@ -90,19 +87,19 @@
 
 - (NSUInteger)numberOfItemsInGridControl:(ZBGridControl *)inControl
 {
-	return [images count];
+	return images.count;
 }
 - (UIImage *)imageForItemInGridControl:(ZBGridControl *)inControl atIndex:(NSUInteger)inIndex
 {
-	UIImage *image = [UIImage imageNamed:[images objectAtIndex:inIndex]];
+	UIImage *image = [UIImage imageNamed:images[inIndex]];
 	return image;
 }
 
 - (void)gridContol:(ZBGridControl *)inControl didSelectItemAtIndex:(NSUInteger)inIndex withLayer:(CALayer *)inLayer;
 {
-	UIImage *image = [UIImage imageNamed:[images objectAtIndex:inIndex]];
+	UIImage *image = [UIImage imageNamed:images[inIndex]];
 	imageViewController.image = image;
-	imageViewController.title = [images objectAtIndex:inIndex];
+	imageViewController.title = images[inIndex];
 	UIImage *screenshot = [imageNavController.view screenshot];
 	
 	self.transitionLayer = (ZBGridLayer *)inLayer;
@@ -131,7 +128,7 @@
 	
 	CAAnimationGroup *group = [CAAnimationGroup animation];
 	group.duration = 0.5;
-	group.animations = [NSArray arrayWithObjects:boundsAnimation, positionAnimation, nil];
+	group.animations = @[boundsAnimation, positionAnimation];
 	group.fillMode = kCAFillModeForwards;
 	group.removedOnCompletion = NO;
 	group.delegate = self;

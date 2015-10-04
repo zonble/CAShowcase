@@ -11,10 +11,6 @@
 
 @implementation RootViewController
 
-- (void)dealloc 
-{	
-    [super dealloc];
-}
 
 - (void)viewDidUnload 
 {
@@ -55,9 +51,9 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-	cell.textLabel.text = [[NSArray arrayWithObjects:@"1. Basic Animation",
+	cell.textLabel.text = @[@"1. Basic Animation",
 						   @"2. CAKeyframeAnimation",
 						   @"3. Transitions",
 						   @"4. Auto-layout",
@@ -65,8 +61,7 @@
 						   @"6. Fireworks",
 						   @"7. Grid Control",
 						   @"8. Transform", 
-						   @"9. Inverted Effect",
-							nil] objectAtIndex:indexPath.row];
+						   @"9. Inverted Effect"][indexPath.row];
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     return cell;
 }
@@ -76,7 +71,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
 {
-	NSArray *classes = [NSArray arrayWithObjects:@"ZBBananaViewController",
+	NSArray *classes = @[@"ZBBananaViewController",
 						@"ZBPathViewController",
 						@"ZBTransitionViewController",
 						@"ZBLayoutViewController",
@@ -84,11 +79,9 @@
 						@"ZBFireworkViewController",
 						@"ZBGridController",
 						@"ZBTransformViewController",
-						@"ZBInvertedViewController",
-						nil];
-	UIViewController *controller = [[NSClassFromString([classes objectAtIndex:indexPath.row]) alloc] init];
+						@"ZBInvertedViewController"];
+	UIViewController *controller = [[NSClassFromString(classes[indexPath.row]) alloc] init];
 	[self.navigationController pushViewController:controller animated:YES];
-	[controller release];
 }
 
 @end

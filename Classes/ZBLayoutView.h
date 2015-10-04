@@ -12,6 +12,6 @@
 	BOOL animationFlag;
 }
 
-@property (retain, nonatomic) UITouch *currentTouch;
+@property (strong, nonatomic) UITouch *currentTouch;
 
 @end

@@ -2,7 +2,7 @@
 
 @implementation ZBFireworkLayer
 
-- (id)initWithHue:(CGFloat)inHue
+- (instancetype)initWithHue:(CGFloat)inHue
 {
 	self = [super init];
 	if (self != nil) {
@@ -21,13 +21,13 @@
 - (void)animationDidStop:(CAAnimation *)theAnimation finished:(BOOL)flag
 {
 	if ([theAnimation isEqual:[self animationForKey:@"move"]]) {
-		NSUInteger count = [[self sublayers] count];
+		NSUInteger count = self.sublayers.count;
 		if (!count) {
 			count = 1;
 		}
 		NSUInteger index = 0;
 		CGFloat radius = 300.0 * (random() % 100 / 100.0);
-		for (ZBLayoutLayer *aLayer in [self sublayers]) {
+		for (ZBLayoutLayer *aLayer in self.sublayers) {
 			CGFloat r = M_PI * 2 / (CGFloat)count * (CGFloat)index;
 			CGFloat x = cos(r) * radius;
 			CGFloat y = sin(r) * radius;
@@ -36,12 +36,12 @@
 			positionAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(x, y)];
 
 			CABasicAnimation *opacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-			opacityAnimation.fromValue = [NSNumber numberWithFloat:0.5];
-			opacityAnimation.toValue = [NSNumber numberWithFloat:0.0];
+			opacityAnimation.fromValue = @0.5f;
+			opacityAnimation.toValue = @0.0f;
 			
 			CAAnimationGroup *group = [CAAnimationGroup animation];
 			group.duration = 0.5;
-			group.animations = [NSArray arrayWithObjects:positionAnimation, opacityAnimation, nil];
+			group.animations = @[positionAnimation, opacityAnimation];
 			group.delegate = self;			
 			group.removedOnCompletion = NO;
 			group.fillMode = kCAFillModeForwards;
@@ -49,7 +49,7 @@
 			index++;
 		}
 	}
-	if ([theAnimation isEqual:[[self.sublayers lastObject] animationForKey:@"explode"]]) {
+	if ([theAnimation isEqual:[(self.sublayers).lastObject animationForKey:@"explode"]]) {
 		[self removeFromSuperlayer];
 	}
 }
@@ -69,9 +69,6 @@
 	animation.fromValue = [NSValue valueWithCGPoint:inFrom];
 	animation.toValue = [NSValue valueWithCGPoint:inTo];
 	animation.delegate = self;
-
-//	animation.autoreverses = YES;
-//	animation.repeatCount = 2;
 	
 	[self addAnimation:animation forKey:@"move"];
 }

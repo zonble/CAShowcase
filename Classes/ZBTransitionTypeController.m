@@ -2,18 +2,13 @@
 
 @implementation ZBTransitionTypeController
 
-- (void)dealloc 
-{
-	[types release];
-    [super dealloc];
-}
 
-- (id)init
+- (instancetype)init
 {
 	self = [super init];
 	if (self != nil) {
 		// http://iphonedevwiki.net/index.php/CATransition
-		types = [[NSArray alloc] initWithObjects:kCATransitionFade,
+		types = @[kCATransitionFade,
 				 kCATransitionMoveIn,
 				 kCATransitionPush,
 				 kCATransitionReveal,
@@ -29,21 +24,7 @@
 				 @"pageCurl",
 				 @"pageUnCurl",
 				 @"rippleEffect",
-				 @"suckEffect",
-//				 @"tubey",
-//				 @"spewEffect",
-//				 @"genieEffect",
-//				 @"unGenieEffect",
-//				 @"twist",
-//				 @"swirl",
-//				 @"charminUltra",
-//				 @"reflection",
-//				 @"zoomyIn",
-//				 @"zoomyOut",
-//				 @"mapCurl",
-//				 @"mapUnCurl",
-//				 @"oglApplicationSuspend",
-				 nil];
+				 @"suckEffect"];
 		self.title = @"Types";
 	}
 	return self;
@@ -110,7 +91,7 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [types count];
+    return types.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -119,9 +100,9 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-	NSString *string = [types objectAtIndex:indexPath.row];
+	NSString *string = types[indexPath.row];
 	cell.textLabel.text = string;	
 	if (indexPath.row == selectedIndex) {
 		cell.accessoryType = UITableViewCellAccessoryCheckmark;
@@ -142,7 +123,7 @@
 
 - (NSString *)selectedType
 {
-	return [types objectAtIndex:selectedIndex];
+	return types[selectedIndex];
 }
 
 @synthesize delegate;
