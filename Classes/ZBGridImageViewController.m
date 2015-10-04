@@ -2,28 +2,12 @@
 
 @implementation ZBGridImageViewController
 
-- (void)removeOutletsAndControls_ZBGridImageViewController
-{
-	imageView = nil;
-	self.label = nil;
-}
-
-- (void)dealloc 
-{
-	[self removeOutletsAndControls_ZBGridImageViewController];	
-}
-- (void)viewDidUnload
-{
-	[super viewDidUnload];
-	[self removeOutletsAndControls_ZBGridImageViewController];
-}
-
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
 	return YES;
 }
 
-- (void)loadView 
+- (void)loadView
 {
 	imageView = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 	imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
@@ -31,7 +15,7 @@
 	imageView.contentMode = UIViewContentModeScaleAspectFit;
 	imageView.backgroundColor = [UIColor darkGrayColor];
 	self.view = imageView;
-	
+
 	label = [[UILabel alloc] initWithFrame:CGRectMake(10.0, self.view.bounds.size.height - 80.0, self.view.bounds.size.width - 20.0, 60.0)];
 	label.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
 	label.numberOfLines = 3;
@@ -40,7 +24,7 @@
 	label.text = @"Lorem ipsum dolor sit amet, odio quis adipiscing ligula. Augue tellus amet diam justo et nulla";
 	label.font = [UIFont boldSystemFontOfSize:13.0];
 	[self.view addSubview:label];
-	
+
 }
 
 - (void)viewDidLoad
@@ -71,7 +55,7 @@
 {
 	id tmp = image;
 	image = inImage;
-	
+
 	if (imageView) {
 		imageView.image = image;
 	}

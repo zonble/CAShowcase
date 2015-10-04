@@ -8,7 +8,7 @@
 
 @end
 
-@interface ZBGridImageViewController : UIViewController 
+@interface ZBGridImageViewController : UIViewController
 {
 	id <ZBGridImageViewControllerDelegate> __weak delegate;
 	UIImageView *imageView;

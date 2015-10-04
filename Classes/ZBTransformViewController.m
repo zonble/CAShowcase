@@ -3,48 +3,27 @@
 
 @implementation ZBTransformViewController
 
-- (void)removeOutletsAndControls_ZBTransformViewController
-{
-    // remove and clean outlets and controls here
-}
-
-- (void)dealloc 
-{
-	[self removeOutletsAndControls_ZBTransformViewController];
-}
-- (void)viewDidUnload
-{
-	[super viewDidUnload];
-	[self removeOutletsAndControls_ZBTransformViewController];
-}
-- (void)didReceiveMemoryWarning
-{
-	[super didReceiveMemoryWarning];
-}
-
-#pragma mark - View lifecycle
-
 - (instancetype)init
 {
-    self = [super init];
-    if (self) {
-        self.title = @"Transform";
-    }
-    return self;
+	self = [super init];
+	if (self) {
+		self.title = @"Transform";
+	}
+	return self;
 }
 
-- (void)loadView 
+- (void)loadView
 {
 	UIView *aView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 	aView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
 	aView.backgroundColor = [UIColor grayColor];
 	self.view = aView;
-	
+
 	ZBGridLayer *layer1 = [[ZBGridLayer alloc] init];
 	layer1.frame = CGRectMake(20.0, 20.0, 100.0, 100.0);
 	layer1.image = [UIImage imageNamed:@"bike1.jpg"];
 	[self.view.layer addSublayer:layer1];
-	
+
 	CABasicAnimation *a1 = [CABasicAnimation animationWithKeyPath:@"transform.rotation.x"];
 	a1.fromValue = @0.0f;
 	a1.toValue = @(M_PI * 2);
@@ -78,7 +57,7 @@
 	a3.repeatCount = NSUIntegerMax;
 	a3.duration = 2.0;
 	[layer3 addAnimation:a3 forKey:@"z"];
-	
+
 	ZBGridLayer *layer4 = [[ZBGridLayer alloc] init];
 	layer4.frame = CGRectMake(140.0, 20.0, 100.0, 100.0);
 	layer4.image = [UIImage imageNamed:@"bike1.jpg"];
@@ -102,8 +81,6 @@
 
 	[layer6 addAnimation:a1 forKey:@"x"];
 	[layer6 addAnimation:a3 forKey:@"z"];
-
-	
 }
 
 @end

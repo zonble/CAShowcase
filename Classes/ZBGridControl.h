@@ -9,14 +9,15 @@
 - (void)gridContol:(ZBGridControl *)inControl didSelectItemAtIndex:(NSUInteger)inIndex withLayer:(CALayer *)inLayer;
 @end
 
-@interface ZBGridControl : UIScrollView 
+@interface ZBGridControl : UIScrollView
 {
 	id <ZBGridControlDelegate> dataSource;
-    NSMutableArray *layers;
+	NSMutableArray *layers;
 	NSUInteger selectedIndex;
 }
 
 - (void)reloadData;
+
 - (void)resetSelection;
 
 @property (weak, nonatomic) id <ZBGridControlDelegate> dataSource;

@@ -1,6 +1,2 @@
 @interface ZBFireworkView : UIView 
-{
-
-}
-
 @end

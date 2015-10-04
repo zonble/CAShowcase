@@ -4,12 +4,12 @@
 #import "ZBGridLayer.h"
 
 @interface ZBGridController : UIViewController
-	<ZBGridControlDelegate, ZBGridImageViewControllerDelegate>
+		<ZBGridControlDelegate, ZBGridImageViewControllerDelegate>
 {
 	ZBGridControl *control;
 	ZBGridImageViewController *imageViewController;
 	UINavigationController *imageNavController;
-    NSArray *images;
+	NSArray *images;
 
 	ZBGridLayer *transitionLayer;
 }

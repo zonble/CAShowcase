@@ -1,9 +1,7 @@
 #import "CAShowcaseAppDelegate.h"
 #import "RootViewController.h"
 
-
 @implementation CAShowcaseAppDelegate
-
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -19,34 +17,7 @@
 }
 
 
-- (void)applicationWillResignActive:(UIApplication *)application 
-{
-}
-- (void)applicationDidEnterBackground:(UIApplication *)application 
-{
-}
-- (void)applicationWillEnterForeground:(UIApplication *)application 
-{
-}
-- (void)applicationDidBecomeActive:(UIApplication *)application 
-{
-}
-- (void)applicationWillTerminate:(UIApplication *)application 
-{
-}
-
-
-#pragma mark -
-#pragma mark Memory management
-
-- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application 
-{
-}
-
-
 @synthesize window;
 @synthesize navigationController;
-
-
 @end
 

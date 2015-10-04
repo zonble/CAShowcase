@@ -3,16 +3,16 @@
 
 @implementation ZBFireworkViewController
 
-- (instancetype)init 
+- (instancetype)init
 {
-    self = [super init];
-    if (self) {
-        self.title = @"Fireworks";
-    }
-    return self;
+	self = [super init];
+	if (self) {
+		self.title = @"Fireworks";
+	}
+	return self;
 }
 
-- (void)loadView 
+- (void)loadView
 {
 	ZBFireworkView *aView = [[ZBFireworkView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 	aView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;

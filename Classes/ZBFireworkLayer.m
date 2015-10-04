@@ -12,7 +12,7 @@
 			aLayer.color = [UIColor colorWithHue:inHue saturation:1.0 brightness:1.0 alpha:0.5];
 			aLayer.bounds = CGRectMake(0.0, 0.0, 20.0, 20.0);
 			aLayer.position = CGPointZero;
-			[self addSublayer:aLayer];			
+			[self addSublayer:aLayer];
 		}
 	}
 	return self;
@@ -38,11 +38,11 @@
 			CABasicAnimation *opacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
 			opacityAnimation.fromValue = @0.5f;
 			opacityAnimation.toValue = @0.0f;
-			
+
 			CAAnimationGroup *group = [CAAnimationGroup animation];
 			group.duration = 0.5;
 			group.animations = @[positionAnimation, opacityAnimation];
-			group.delegate = self;			
+			group.delegate = self;
 			group.removedOnCompletion = NO;
 			group.fillMode = kCAFillModeForwards;
 			[aLayer addAnimation:group forKey:@"explode"];
@@ -61,7 +61,7 @@
 	self.position = inFrom;
 	[CATransaction commit];
 	[inSuperlayer addSublayer:self];
-	
+
 	CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
 	animation.duration = 0.5;
 	animation.removedOnCompletion = NO;
@@ -69,7 +69,7 @@
 	animation.fromValue = [NSValue valueWithCGPoint:inFrom];
 	animation.toValue = [NSValue valueWithCGPoint:inTo];
 	animation.delegate = self;
-	
+
 	[self addAnimation:animation forKey:@"move"];
 }
 

@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7dbd3f86-3527-4b99-aa41-fc78d43876e6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/CAShowcaseAppDelegate.h" afterPath="$PROJECT_DIR$/Classes/CAShowcaseAppDelegate.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/CAShowcaseAppDelegate.m" afterPath="$PROJECT_DIR$/Classes/CAShowcaseAppDelegate.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/RootViewController.m" afterPath="$PROJECT_DIR$/Classes/RootViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBAnimateTableViewController.m" afterPath="$PROJECT_DIR$/Classes/ZBAnimateTableViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/UIView+Screenshot.m" afterPath="$PROJECT_DIR$/Classes/UIView+Screenshot.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBBananaLayer.h" afterPath="$PROJECT_DIR$/Classes/ZBBananaLayer.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBBananaLayer.m" afterPath="$PROJECT_DIR$/Classes/ZBBananaLayer.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBBananaViewController.h" afterPath="$PROJECT_DIR$/Classes/ZBBananaViewController.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBBananaViewController.m" afterPath="$PROJECT_DIR$/Classes/ZBBananaViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBFireworkLayer.h" afterPath="$PROJECT_DIR$/Classes/ZBFireworkLayer.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBFireworkLayer.m" afterPath="$PROJECT_DIR$/Classes/ZBFireworkLayer.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBFireworkView.h" afterPath="$PROJECT_DIR$/Classes/ZBFireworkView.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBFireworkView.m" afterPath="$PROJECT_DIR$/Classes/ZBFireworkView.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBFireworkViewController.h" afterPath="$PROJECT_DIR$/Classes/ZBFireworkViewController.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBFireworkViewController.m" afterPath="$PROJECT_DIR$/Classes/ZBFireworkViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBGridControl.h" afterPath="$PROJECT_DIR$/Classes/ZBGridControl.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBGridControl.m" afterPath="$PROJECT_DIR$/Classes/ZBGridControl.m" />
@@ -18,23 +22,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBGridImageViewController.m" afterPath="$PROJECT_DIR$/Classes/ZBGridImageViewController.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBGridLayer.h" afterPath="$PROJECT_DIR$/Classes/ZBGridLayer.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBGridLayer.m" afterPath="$PROJECT_DIR$/Classes/ZBGridLayer.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBLayoutLayer.h" afterPath="$PROJECT_DIR$/Classes/ZBLayoutLayer.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBLayoutLayer.m" afterPath="$PROJECT_DIR$/Classes/ZBLayoutLayer.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBLayoutView.h" afterPath="$PROJECT_DIR$/Classes/ZBLayoutView.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBLayoutView.m" afterPath="$PROJECT_DIR$/Classes/ZBLayoutView.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBLayoutViewController.m" afterPath="$PROJECT_DIR$/Classes/ZBLayoutViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBInvertedViewController.m" afterPath="$PROJECT_DIR$/Classes/ZBInvertedViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBPathView.h" afterPath="$PROJECT_DIR$/Classes/ZBPathView.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBPathView.m" afterPath="$PROJECT_DIR$/Classes/ZBPathView.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBPathViewController.m" afterPath="$PROJECT_DIR$/Classes/ZBPathViewController.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBPathViewController.h" afterPath="$PROJECT_DIR$/Classes/ZBPathViewController.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBTransformViewController.h" afterPath="$PROJECT_DIR$/Classes/ZBTransformViewController.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBTransformViewController.m" afterPath="$PROJECT_DIR$/Classes/ZBTransformViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBTransitionSettingsTableViewController.m" afterPath="$PROJECT_DIR$/Classes/ZBTransitionSettingsTableViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBTransitionSubtypeController.h" afterPath="$PROJECT_DIR$/Classes/ZBTransitionSubtypeController.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBTransitionSubtypeController.m" afterPath="$PROJECT_DIR$/Classes/ZBTransitionSubtypeController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBTransitionTypeController.h" afterPath="$PROJECT_DIR$/Classes/ZBTransitionTypeController.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBTransitionTypeController.m" afterPath="$PROJECT_DIR$/Classes/ZBTransitionTypeController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBTransitionViewController.h" afterPath="$PROJECT_DIR$/Classes/ZBTransitionViewController.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/ZBTransitionViewController.m" afterPath="$PROJECT_DIR$/Classes/ZBTransitionViewController.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.m" afterPath="$PROJECT_DIR$/main.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CAShowcase.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/CAShowcase.xcodeproj/project.pbxproj" />
     </list>
     <ignored path="CAShowcase.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,20 +42,31 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_33e35055a43ed34590865c807c6b6a2838d7257d" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_7d03d30dd954aaabc848fd1d497d2b30a8707142" />
   <component name="FavoritesManager">
     <favorites_list name="CAShowcase" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ZBGridController.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classes/ZBGridController.h">
+      <file leaf-file-name="ZBInvertedViewController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classes/ZBInvertedViewController.h">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="e#0#33#0" expanded="true" />
-                <marker date="1443969029000" expanded="true" signature="229:522" placeholder="..." />
+                <element signature="e#0#23#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZBInvertedViewController.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classes/ZBInvertedViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,7 +76,7 @@
         <entry file="file://$PROJECT_DIR$/Classes/ZBPathView.h">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -84,19 +88,7 @@
         <entry file="file://$PROJECT_DIR$/Classes/ZBPathView.m">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1443969029000" expanded="true" signature="50:1682" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ZBPathViewController.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classes/ZBPathViewController.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -107,31 +99,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-              <folding>
-                <marker date="1443969029000" expanded="true" signature="70:428" placeholder="..." />
-                <marker date="1443969029000" expanded="true" signature="423:426" placeholder="{...}" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ZBAnimateTableViewController.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classes/ZBAnimateTableViewController.h">
+      <file leaf-file-name="ZBPathViewController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classes/ZBPathViewController.h">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding>
-                <marker date="1443968888000" expanded="true" signature="130:132" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ZBAnimateTableViewController.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classes/ZBAnimateTableViewController.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -141,20 +118,30 @@
         <entry file="file://$PROJECT_DIR$/Classes/ZBTransformViewController.h">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ZBTransformViewController.m" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ZBTransformViewController.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Classes/ZBTransformViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65301204">
-              <caret line="79" column="41" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CAShowcaseAppDelegate.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Classes/CAShowcaseAppDelegate.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.10843374">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -167,27 +154,36 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Classes/UIView+Screenshot.h" />
+        <option value="$PROJECT_DIR$/Classes/ZBPathViewController.m" />
+        <option value="$PROJECT_DIR$/Classes/ZBAnimateTableViewController.h" />
+        <option value="$PROJECT_DIR$/Classes/ZBAnimateTableViewController.m" />
         <option value="$PROJECT_DIR$/Classes/ZBBananaLayer.m" />
         <option value="$PROJECT_DIR$/Classes/ZBBananaLayer.h" />
         <option value="$PROJECT_DIR$/Classes/ZBBananaViewController.h" />
         <option value="$PROJECT_DIR$/Classes/ZBBananaViewController.m" />
         <option value="$PROJECT_DIR$/Classes/ZBFireworkLayer.h" />
         <option value="$PROJECT_DIR$/Classes/ZBFireworkLayer.m" />
+        <option value="$PROJECT_DIR$/Classes/ZBFireworkView.h" />
         <option value="$PROJECT_DIR$/Classes/ZBFireworkView.m" />
         <option value="$PROJECT_DIR$/Classes/ZBFireworkViewController.h" />
         <option value="$PROJECT_DIR$/Classes/ZBFireworkViewController.m" />
-        <option value="$PROJECT_DIR$/Classes/UIView+Screenshot.h" />
         <option value="$PROJECT_DIR$/Classes/UIView+Screenshot.m" />
         <option value="$PROJECT_DIR$/Classes/ZBGridControl.h" />
         <option value="$PROJECT_DIR$/Classes/ZBGridControl.m" />
+        <option value="$PROJECT_DIR$/Classes/ZBGridController.h" />
+        <option value="$PROJECT_DIR$/Classes/ZBGridController.m" />
+        <option value="$PROJECT_DIR$/Classes/ZBGridImageViewController.h" />
+        <option value="$PROJECT_DIR$/Classes/ZBGridImageViewController.m" />
+        <option value="$PROJECT_DIR$/Classes/ZBGridLayer.h" />
+        <option value="$PROJECT_DIR$/Classes/ZBGridLayer.m" />
+        <option value="$PROJECT_DIR$/Classes/ZBInvertedViewController.m" />
         <option value="$PROJECT_DIR$/Classes/ZBPathView.h" />
         <option value="$PROJECT_DIR$/Classes/ZBPathView.m" />
         <option value="$PROJECT_DIR$/Classes/ZBPathViewController.h" />
-        <option value="$PROJECT_DIR$/Classes/ZBPathViewController.m" />
-        <option value="$PROJECT_DIR$/Classes/ZBAnimateTableViewController.h" />
-        <option value="$PROJECT_DIR$/Classes/ZBAnimateTableViewController.m" />
         <option value="$PROJECT_DIR$/Classes/ZBTransformViewController.h" />
         <option value="$PROJECT_DIR$/Classes/ZBTransformViewController.m" />
+        <option value="$PROJECT_DIR$/Classes/CAShowcaseAppDelegate.m" />
       </list>
     </option>
   </component>
@@ -321,6 +317,24 @@
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Inverted View" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAShowcase" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Classes" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Grid Control" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
@@ -340,6 +354,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Firework" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeRootNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAShowcase" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Classes" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Banana" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -412,26 +444,28 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Classes/ZBAnimateTableViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <marker date="1443968888000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBAnimateTableViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Classes/ZBBananaLayer.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/ZBBananaViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21927711">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/ZBBananaViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13012049">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -439,7 +473,23 @@
     <entry file="file://$PROJECT_DIR$/Classes/ZBBananaLayer.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBBananaViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBBananaViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -447,17 +497,23 @@
     <entry file="file://$PROJECT_DIR$/Classes/ZBFireworkLayer.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#33#0" expanded="false" />
-          </folding>
+          <caret line="6" column="85" selection-start-line="6" selection-start-column="84" selection-end-line="6" selection-end-column="85" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Classes/ZBFireworkLayer.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="4" selection-start-line="71" selection-start-column="4" selection-end-line="71" selection-end-column="4" />
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBFireworkView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -465,10 +521,8 @@
     <entry file="file://$PROJECT_DIR$/Classes/ZBFireworkView.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="false" />
-          </folding>
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -483,25 +537,25 @@
     <entry file="file://$PROJECT_DIR$/Classes/ZBFireworkViewController.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#36#0" expanded="false" />
-          </folding>
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Classes/UIView+Screenshot.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="19" selection-start-line="0" selection-start-column="19" selection-end-line="0" selection-end-column="19" />
-          <folding />
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Classes/UIView+Screenshot.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -509,7 +563,7 @@
     <entry file="file://$PROJECT_DIR$/Classes/ZBGridControl.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <caret line="7" column="94" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -517,20 +571,79 @@
     <entry file="file://$PROJECT_DIR$/Classes/ZBGridControl.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#25#0" expanded="false" />
-          </folding>
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Classes/ZBGridController.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
-            <marker date="1443969029000" expanded="true" signature="229:522" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBGridController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBGridImageViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBGridImageViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBGridLayer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBGridLayer.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="1" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBInvertedViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#23#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBInvertedViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -538,7 +651,7 @@
     <entry file="file://$PROJECT_DIR$/Classes/ZBPathView.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
@@ -548,17 +661,7 @@
     <entry file="file://$PROJECT_DIR$/Classes/ZBPathView.m">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1443969029000" expanded="true" signature="50:1682" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/ZBPathViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -567,27 +670,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-          <folding>
-            <marker date="1443969029000" expanded="true" signature="70:428" placeholder="..." />
-            <marker date="1443969029000" expanded="true" signature="423:426" placeholder="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/ZBAnimateTableViewController.h">
+    <entry file="file://$PROJECT_DIR$/Classes/ZBPathViewController.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <marker date="1443968888000" expanded="true" signature="130:132" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/ZBAnimateTableViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -595,8 +685,28 @@
     <entry file="file://$PROJECT_DIR$/Classes/ZBTransformViewController.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/ZBTransformViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/CAShowcaseAppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.043373495">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -605,16 +715,6 @@
         <state vertical-scroll-proportion="0.10843374">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/ZBTransformViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65301204">
-          <caret line="79" column="41" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

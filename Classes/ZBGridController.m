@@ -3,26 +3,6 @@
 
 @implementation ZBGridController
 
-- (void)removeOutletsAndControls_ZBGridController
-{
-    // remove and clean outlets and controls here
-	self.control = nil;
-}
-
-- (void)dealloc 
-{
-	[self removeOutletsAndControls_ZBGridController];
-}
-- (void)viewDidUnload
-{
-	[super viewDidUnload];
-	[self removeOutletsAndControls_ZBGridController];
-}
-- (void)didReceiveMemoryWarning
-{
-	[super didReceiveMemoryWarning];
-}
-
 - (void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
@@ -31,21 +11,21 @@
 
 #pragma mark - View lifecycle
 
-- (instancetype)init 
+- (instancetype)init
 {
-    self = [super init];
-    if (self) {
+	self = [super init];
+	if (self) {
 		self.title = @"Grid Control";
 		images = @[@"bike1.jpg", @"bike2.jpg", @"bike3.jpg", @"bike4.jpg", @"bike5.jpg",
-				  @"bike1.jpg", @"bike2.jpg", @"bike3.jpg", @"bike4.jpg", @"bike5.jpg",
-				  @"bike1.jpg", @"bike2.jpg", @"bike3.jpg", @"bike4.jpg", @"bike5.jpg",
-				  @"bike1.jpg", @"bike2.jpg", @"bike3.jpg", @"bike4.jpg", @"bike5.jpg"];
+		           @"bike1.jpg", @"bike2.jpg", @"bike3.jpg", @"bike4.jpg", @"bike5.jpg",
+		           @"bike1.jpg", @"bike2.jpg", @"bike3.jpg", @"bike4.jpg", @"bike5.jpg",
+		           @"bike1.jpg", @"bike2.jpg", @"bike3.jpg", @"bike4.jpg", @"bike5.jpg"];
 		imageViewController = [[ZBGridImageViewController alloc] init];
 		imageViewController.delegate = self;
 		imageNavController = [[UINavigationController alloc] initWithRootViewController:imageViewController];
 		imageNavController.navigationBar.barStyle = UIBarStyleBlackTranslucent;
-    }
-    return self;
+	}
+	return self;
 }
 
 
@@ -54,12 +34,12 @@
 	return YES;
 }
 
-- (void)loadView 
+- (void)loadView
 {
 	UIView *aView = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 	aView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	self.view = aView;
-	
+
 	ZBGridControl *aControl = [[ZBGridControl alloc] initWithFrame:aView.bounds];
 	aControl.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	self.control = aControl;
@@ -89,6 +69,7 @@
 {
 	return images.count;
 }
+
 - (UIImage *)imageForItemInGridControl:(ZBGridControl *)inControl atIndex:(NSUInteger)inIndex
 {
 	UIImage *image = [UIImage imageNamed:images[inIndex]];
@@ -101,16 +82,16 @@
 	imageViewController.image = image;
 	imageViewController.title = images[inIndex];
 	UIImage *screenshot = [imageNavController.view screenshot];
-	
+
 	self.transitionLayer = (ZBGridLayer *)inLayer;
-	
+
 	CGRect fromRect = [self.navigationController.view.layer convertRect:inLayer.frame fromLayer:inLayer.superlayer];
 	[CATransaction begin];
 	[CATransaction setValue:(id)kCFBooleanTrue forKey:kCATransactionDisableActions];
 	[self.navigationController.view.layer addSublayer:self.transitionLayer];
 	self.transitionLayer.frame = fromRect;
 	[CATransaction commit];
-	
+
 	CABasicAnimation *boundsAnimation = [CABasicAnimation animationWithKeyPath:@"bounds"];
 	boundsAnimation.fromValue = [NSValue valueWithCGRect:self.transitionLayer.frame];
 	boundsAnimation.toValue = [NSValue valueWithCGRect:self.navigationController.view.bounds];
@@ -118,14 +99,14 @@
 	CABasicAnimation *positionAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
 	positionAnimation.fromValue = [NSValue valueWithCGPoint:self.transitionLayer.position];
 	positionAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(CGRectGetMidX(self.navigationController.view.bounds), CGRectGetMidY(self.navigationController.view.bounds))];
-	
+
 	CATransition *t = [CATransition animation];
 	t.type = @"flip";
 //	t.type = @"cube";
 	t.subtype = kCATransitionFromRight;
 	t.duration = 0.25;
 	self.transitionLayer.contents = (id)screenshot.CGImage;
-	
+
 	CAAnimationGroup *group = [CAAnimationGroup animation];
 	group.duration = 0.5;
 	group.animations = @[boundsAnimation, positionAnimation];

@@ -1,8 +1,8 @@
 #import <QuartzCore/QuartzCore.h>
 
-@interface ZBGridLayer : CALayer 
+@interface ZBGridLayer : CALayer
 {
-    UIImage *image;
+	UIImage *image;
 	NSString *title;
 	UIAccessibilityElement *element;
 	UIView *view;

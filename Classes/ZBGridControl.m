@@ -1,17 +1,12 @@
 #import "ZBGridControl.h"
 #import "ZBGridLayer.h"
 
-static NSUInteger itemsPerRow = 3;
-static CGFloat itemHeight = 80.0;
-static CGFloat itemWidth = 80.0;
+static NSUInteger const itemsPerRow = 3;
+static CGFloat const itemHeight = 80.0;
+static CGFloat const itemWidth = 80.0;
 
 @implementation ZBGridControl
 
-- (void)dealloc
-{
-	self.delegate = nil;
-	self.dataSource = nil;
-}
 
 - (void)tap:(UITapGestureRecognizer *)r
 {

@@ -2,21 +2,20 @@
 
 @implementation ZBGridLayer
 
-
 - (instancetype)init
 {
-    self = [super init];
-    if (self) {
+	self = [super init];
+	if (self) {
 		image = nil;
-        title = nil;
-    }
-    return self;
+		title = nil;
+	}
+	return self;
 }
 
 - (void)drawInContext:(CGContextRef)ctx
 {
 	UIGraphicsPushContext(ctx);
-	UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:10.0];	
+	UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:10.0];
 	CGContextSaveGState(ctx);
 	CGContextAddPath(ctx, path.CGPath);
 	CGContextClip(ctx);
@@ -27,7 +26,6 @@
 
 - (void)setImage:(UIImage *)inImage
 {
-	id tmp = image;
 	image = inImage;
 	[self setNeedsDisplay];
 }
