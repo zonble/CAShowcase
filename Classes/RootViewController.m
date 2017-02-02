@@ -12,14 +12,6 @@
 @implementation RootViewController
 
 #pragma mark -
-#pragma mark Memory management
-
-- (void)didReceiveMemoryWarning 
-{
-    [super didReceiveMemoryWarning];
-}
-
-#pragma mark -
 #pragma mark View lifecycle
 
 - (void)viewDidLoad
@@ -51,7 +43,7 @@
 	cell.textLabel.text = @[@"1. Basic Animation",
 						   @"2. CAKeyframeAnimation",
 						   @"3. Transitions",
-						   @"4. Auto-layout",
+						   @"4. Layout",
 						   @"5. Tableview",
 						   @"6. Fireworks",
 						   @"7. Grid Control",

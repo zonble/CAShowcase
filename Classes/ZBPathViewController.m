@@ -10,11 +10,19 @@
     }
     return self;
 }
-- (void)loadView 
+
+- (void)loadView
 {
 	ZBPathView *pathView = [[ZBPathView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 	pathView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 	self.view = pathView;
+}
+
+- (void)viewDidLoad
+{
+	[super viewDidLoad];
+	NSUInteger option = UIRectEdgeLeft | UIRectEdgeBottom | UIRectEdgeRight;
+	[self setEdgesForExtendedLayout:option];
 }
 
 @end

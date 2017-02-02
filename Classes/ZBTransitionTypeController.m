@@ -2,7 +2,6 @@
 
 @implementation ZBTransitionTypeController
 
-
 - (instancetype)init
 {
 	self = [super init];
@@ -29,59 +28,6 @@
 	}
 	return self;
 }
-
-
-#pragma mark -
-#pragma mark UIViewContoller Methods
-
-/*
-// Implement loadView to create a view hierarchy programmatically, without
-// using a nib.
-- (void)loadView 
-{
-}
-*/
-/*
-- (void)viewDidLoad 
-{
-    [super viewDidLoad];
-}
-- (void)viewWillAppear:(BOOL)animated 
-{
-    [super viewWillAppear:animated];
-}
-- (void)viewDidAppear:(BOOL)animated 
-{
-    [super viewDidAppear:animated];
-}
-- (void)viewWillDisappear:(BOOL)animated 
-{
-	[super viewWillDisappear:animated];
-}
-- (void)viewDidDisappear:(BOOL)animated 
-{
-	[super viewDidDisappear:animated];
-}
-*/
-
-- (void)didReceiveMemoryWarning
-{
-	// Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-	
-	// Release any cached data, images, etc that aren't in use.
-}
-
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
-
 
 #pragma mark Table view methods
 

@@ -20,8 +20,9 @@
 	self.view = aView;
 
 	ZBGridLayer *layer1 = [[ZBGridLayer alloc] init];
-	layer1.frame = CGRectMake(20.0, 20.0, 100.0, 100.0);
+	layer1.frame = CGRectMake(20.0, 20.0 + 64.0, 100.0, 100.0);
 	layer1.image = [UIImage imageNamed:@"bike1.jpg"];
+	layer1.contentsScale = [UIScreen mainScreen].scale;
 	[self.view.layer addSublayer:layer1];
 
 	CABasicAnimation *a1 = [CABasicAnimation animationWithKeyPath:@"transform.rotation.x"];
@@ -33,7 +34,8 @@
 	[layer1 addAnimation:a1 forKey:@"x"];
 
 	ZBGridLayer *layer2 = [[ZBGridLayer alloc] init];
-	layer2.frame = CGRectMake(20.0, 140.0, 100.0, 100.0);
+	layer2.contentsScale = [UIScreen mainScreen].scale;
+	layer2.frame = CGRectMake(20.0, 140.0 + 64.0, 100.0, 100.0);
 	layer2.image = [UIImage imageNamed:@"bike2.jpg"];
 	[self.view.layer addSublayer:layer2];
 
@@ -46,7 +48,8 @@
 	[layer2 addAnimation:a2 forKey:@"y"];
 
 	ZBGridLayer *layer3 = [[ZBGridLayer alloc] init];
-	layer3.frame = CGRectMake(20.0, 260.0, 100.0, 100.0);
+	layer3.contentsScale = [UIScreen mainScreen].scale;
+	layer3.frame = CGRectMake(20.0, 260.0 + 64.0, 100.0, 100.0);
 	layer3.image = [UIImage imageNamed:@"bike3.jpg"];
 	[self.view.layer addSublayer:layer3];
 
@@ -59,7 +62,8 @@
 	[layer3 addAnimation:a3 forKey:@"z"];
 
 	ZBGridLayer *layer4 = [[ZBGridLayer alloc] init];
-	layer4.frame = CGRectMake(140.0, 20.0, 100.0, 100.0);
+	layer4.contentsScale = [UIScreen mainScreen].scale;
+	layer4.frame = CGRectMake(140.0, 20.0 + 64.0, 100.0, 100.0);
 	layer4.image = [UIImage imageNamed:@"bike1.jpg"];
 	[self.view.layer addSublayer:layer4];
 
@@ -67,7 +71,8 @@
 	[layer4 addAnimation:a2 forKey:@"y"];
 
 	ZBGridLayer *layer5 = [[ZBGridLayer alloc] init];
-	layer5.frame = CGRectMake(140.0, 140.0, 100.0, 100.0);
+	layer5.contentsScale = [UIScreen mainScreen].scale;
+	layer5.frame = CGRectMake(140.0, 140.0 + 64.0, 100.0, 100.0);
 	layer5.image = [UIImage imageNamed:@"bike2.jpg"];
 	[self.view.layer addSublayer:layer5];
 
@@ -75,7 +80,8 @@
 	[layer5 addAnimation:a3 forKey:@"z"];
 
 	ZBGridLayer *layer6 = [[ZBGridLayer alloc] init];
-	layer6.frame = CGRectMake(140.0, 260.0, 100.0, 100.0);
+	layer6.contentsScale = [UIScreen mainScreen].scale;
+	layer6.frame = CGRectMake(140.0, 260.0 + 64.0, 100.0, 100.0);
 	layer6.image = [UIImage imageNamed:@"bike3.jpg"];
 	[self.view.layer addSublayer:layer6];
 

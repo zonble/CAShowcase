@@ -30,20 +30,19 @@
 	label.text = @"Lorem ipsum dolor sit amet, odio quis adipiscing ligula. Augue tellus amet diam justo et nulla";
 	label.font = [UIFont boldSystemFontOfSize:13.0];
 	[self.view addSubview:label];
-
 }
 
 - (void)viewDidLoad
 {
 	[super viewDidLoad];
-	UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Close" style:UIBarButtonItemStyleBordered target:self action:@selector(close:)];
+	UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"Close" style:UIBarButtonItemStylePlain target:self action:@selector(close:)];
 	self.navigationItem.leftBarButtonItem = item;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
-	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleBlackTranslucent animated:animated];
+	[[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -59,7 +58,6 @@
 
 - (void)setImage:(UIImage *)inImage
 {
-	id tmp = image;
 	image = inImage;
 
 	if (imageView) {

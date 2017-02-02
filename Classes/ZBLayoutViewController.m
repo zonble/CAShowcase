@@ -6,7 +6,7 @@
 {
 	self = [super init];
 	if (self != nil) {
-		self.title = @"Auto-layout";
+		self.title = @"Layout";
 	}
 	return self;
 }

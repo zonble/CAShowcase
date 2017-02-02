@@ -24,6 +24,7 @@
 	if (!bananaLayer) {
 		bananaLayer = [[ZBBananaLayer alloc] init];
 		bananaLayer.frame = CGRectMake(10, 100, 120, 119);
+		bananaLayer.contentsScale = [UIScreen mainScreen].scale;
 		[self.view.layer addSublayer:bananaLayer];
 	}
 	[self move];

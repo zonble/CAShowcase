@@ -9,11 +9,6 @@
 	CALayer *clipLayer;
 }
 
-- (void)didReceiveMemoryWarning
-{
-	[super didReceiveMemoryWarning];
-}
-
 #pragma mark - View lifecycle
 
 - (instancetype)init
@@ -38,11 +33,13 @@
 
 	if (!invertedImageLayer) {
 		invertedImageLayer = [[CALayer alloc] init];
+		invertedImageLayer.contentsScale = [UIScreen mainScreen].scale;
 		invertedImageLayer.frame = contentView.frame;
 	}
 
 	if (!clipLayer) {
 		clipLayer = [[CALayer alloc] init];
+		clipLayer.contentsScale = [UIScreen mainScreen].scale;
 		[self.view.layer addSublayer:clipLayer];
 	}
 	clipLayer.frame = CGRectMake(0.0, 100.0, 320.0, 80.0);

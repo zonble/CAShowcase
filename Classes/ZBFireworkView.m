@@ -8,6 +8,7 @@
 	CGPoint location = [r locationInView:self];
 	CGFloat hue = (CGFloat)([NSDate timeIntervalSinceReferenceDate] - floor([NSDate timeIntervalSinceReferenceDate]));
 	ZBFireworkLayer *aLayer = [[ZBFireworkLayer alloc] initWithHue:hue];
+	aLayer.contentsScale = [UIScreen mainScreen].scale;
 	CGPoint from = CGPointMake(location.x, (CGFloat)(self.bounds.size.height - 50.0));
 	CGPoint to = CGPointMake(location.x, (CGFloat)((self.bounds.size.height - 100.0) * (random() % 100 / (CGFloat)100)));
 	[aLayer animateInLayer:self.layer from:from to:to];
@@ -46,7 +47,7 @@
 	NSString *msg = @"Tap to fire!";
 	CGRect textFrame = CGRectMake(10.0, 20.0, (CGFloat)(self.bounds.size.width - 20.0), 30.0);
 	[[UIColor whiteColor] set];
-	[msg drawInRect:textFrame withFont:[UIFont boldSystemFontOfSize:18.0] lineBreakMode:UILineBreakModeTailTruncation alignment:UITextAlignmentCenter];
+	[msg drawInRect:textFrame withFont:[UIFont boldSystemFontOfSize:18.0] lineBreakMode:NSLineBreakByTruncatingTail alignment:NSTextAlignmentCenter];
 }
 
 - (BOOL)isAccessibilityElement

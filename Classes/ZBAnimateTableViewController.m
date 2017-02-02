@@ -1,5 +1,8 @@
 #import "ZBAnimateTableViewController.h"
 
+@interface ZBAnimateTableViewController () <CAAnimationDelegate>
+@end
+
 @implementation ZBAnimateTableViewController
 {
 	CALayer *transitionLayer;
@@ -10,7 +13,7 @@
 	transitionLayer = nil;
 }
 
-- (void)dealloc 
+- (void)dealloc
 {
 	[self removeOutletsAndControls_ZBAnimateTableViewController];
 }
@@ -28,12 +31,13 @@
 #pragma mark -
 #pragma mark UIViewContoller Methods
 
-- (void)viewDidLoad 
+- (void)viewDidLoad
 {
-    [super viewDidLoad];
+	[super viewDidLoad];
 	if (!transitionLayer) {
 		transitionLayer = [[CALayer alloc] init];
 	}
+	transitionLayer.contentsScale = [UIScreen mainScreen].scale;
 	self.tableView.rowHeight = 100.0;
 }
 
@@ -42,26 +46,29 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+	return 1;
 }
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 	return 10;
 }
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
-    cell.textLabel.text = [NSString stringWithFormat:@"Cell %d", indexPath.row];
-	NSString *imageName = [NSString stringWithFormat:@"banana%d.tiff", (indexPath.row % 8 + 1)];
+
+	static NSString *CellIdentifier = @"Cell";
+
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	if (cell == nil) {
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+	}
+	cell.textLabel.text = [NSString stringWithFormat:@"Cell %ld", (long)indexPath.row];
+	NSString *imageName = [NSString stringWithFormat:@"banana%ld.tiff", (indexPath.row % 8 + 1)];
 	cell.imageView.image = [UIImage imageNamed:imageName];
-    return cell;
+	return cell;
 }
+
 - (void)animationDidStop:(CAAnimation *)theAnimation finished:(BOOL)flag
 {
 	if ([theAnimation isEqual:[transitionLayer animationForKey:@"move"]]) {
@@ -69,6 +76,7 @@
 		[transitionLayer removeAllAnimations];
 	}
 }
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -80,7 +88,7 @@
 	transitionLayer.frame = [[UIApplication sharedApplication].keyWindow convertRect:aCell.imageView.bounds fromView:aCell.imageView];
 	[[UIApplication sharedApplication].keyWindow.layer addSublayer:transitionLayer];
 	[CATransaction commit];
-	
+
 	CABasicAnimation *positionAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
 	positionAnimation.fromValue = [NSValue valueWithCGPoint:transitionLayer.position];
 	positionAnimation.toValue = [NSValue valueWithCGPoint:CGPointZero];
@@ -91,13 +99,13 @@
 
 	CABasicAnimation *opacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
 	opacityAnimation.fromValue = @1.0f;
-	opacityAnimation.toValue = @0.5f;	
-	
+	opacityAnimation.toValue = @0.5f;
+
 	CABasicAnimation *rotateAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
 	rotateAnimation.fromValue = @(0 * M_PI);
 	rotateAnimation.toValue = @(2 * M_PI);
-	
-	
+
+
 	CAAnimationGroup *group = [CAAnimationGroup animation];
 	group.beginTime = CACurrentMediaTime() + 0.25;
 	group.duration = 0.5;
@@ -105,11 +113,11 @@
 	group.delegate = self;
 	group.fillMode = kCAFillModeForwards;
 	group.removedOnCompletion = NO;
-	
+
 	[transitionLayer addAnimation:group forKey:@"move"];
-	
-	
-    // Navigation logic may go here. Create and push another view controller.
+
+
+	// Navigation logic may go here. Create and push another view controller.
 	// AnotherViewController *anotherViewController = [[AnotherViewController alloc] initWithNibName:@"AnotherView" bundle:nil];
 	// [self.navigationController pushViewController:anotherViewController];
 	// [anotherViewController release];

@@ -1,6 +1,9 @@
 #import "ZBGridController.h"
 #import "UIView+Screenshot.h"
 
+@interface ZBGridController () <CAAnimationDelegate>
+@end
+
 @implementation ZBGridController
 
 - (void)viewWillAppear:(BOOL)animated
@@ -60,7 +63,7 @@
 	[CATransaction commit];
 	[control performSelector:@selector(resetSelection) withObject:nil afterDelay:0.0];
 	self.transitionLayer = nil;
-	[self dismissModalViewControllerAnimated:NO];
+	[self dismissViewControllerAnimated:NO completion:nil];
 }
 
 #pragma -
@@ -102,7 +105,6 @@
 
 	CATransition *t = [CATransition animation];
 	t.type = @"flip";
-//	t.type = @"cube";
 	t.subtype = kCATransitionFromRight;
 	t.duration = 0.25;
 	self.transitionLayer.contents = (id)screenshot.CGImage;
@@ -121,7 +123,7 @@
 {
 	if (anim == [self.transitionLayer animationForKey:@"zoomIn"]) {
 		self.transitionLayer.hidden = YES;
-		[self.navigationController presentModalViewController:imageNavController animated:NO];
+		[self.navigationController presentViewController:imageNavController animated:NO completion:nil];
 	}
 }
 

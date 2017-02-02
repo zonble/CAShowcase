@@ -5,13 +5,15 @@ static NSUInteger const itemsPerRow = 3;
 static CGFloat const itemHeight = 80.0;
 static CGFloat const itemWidth = 80.0;
 
-@implementation ZBGridControl
+@interface ZBGridControl () <CAAnimationDelegate>
 {
 	id <ZBGridControlDelegate> dataSource;
 	NSMutableArray *layers;
 	NSUInteger selectedIndex;
 }
+@end
 
+@implementation ZBGridControl
 
 - (void)tap:(UITapGestureRecognizer *)r
 {

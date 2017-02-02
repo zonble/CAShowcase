@@ -8,7 +8,7 @@
 	useLongerAnimationDurationSwitch = nil;
 }
 
-- (void)dealloc 
+- (void)dealloc
 {
 	[self removeOutletsAndControls_ZBTransitionSettingsTableViewController];
 }
@@ -16,9 +16,9 @@
 #pragma mark -
 #pragma mark UIViewContoller Methods
 
-- (void)viewDidLoad 
+- (void)viewDidLoad
 {
-    [super viewDidLoad];
+	[super viewDidLoad];
 	if (!useFullViewSwitch) {
 		useFullViewSwitch = [[UISwitch alloc] init];
 		[useFullViewSwitch addTarget:self action:@selector(updateSetting:) forControlEvents:UIControlEventValueChanged];
@@ -30,6 +30,7 @@
 	UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(close:)];
 	self.navigationItem.leftBarButtonItem = item;
 }
+
 - (void)viewWillAppear:(BOOL)animated
 {
 	[super viewWillAppear:animated];
@@ -42,30 +43,33 @@
 	self.useFullView = useFullViewSwitch.on;
 	self.useLongerAnimationDuration = useLongerAnimationDurationSwitch.on;
 }
+
 - (IBAction)close:(id)sender
 {
-	[self.navigationController.presentingViewController dismissModalViewControllerAnimated:YES];
+	[self.navigationController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark Table view methods
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+	return 1;
 }
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 	return 2;
 }
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    static NSString *CellIdentifier = @"Cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
+
+	static NSString *CellIdentifier = @"Cell";
+
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+	if (cell == nil) {
+		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+	}
 	cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	switch (indexPath.row) {
 		case 0:
@@ -75,11 +79,11 @@
 		case 1:
 			cell.textLabel.text = @"Slower";
 			cell.accessoryView = useLongerAnimationDurationSwitch;
-			break;			
+			break;
 		default:
 			break;
-	}	
-    return cell;
+	}
+	return cell;
 }
 
 @synthesize useFullView;

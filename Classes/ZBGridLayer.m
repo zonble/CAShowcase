@@ -44,7 +44,6 @@
 - (void)setView:(UIView *)inVew
 {
 	view = inVew;
-	id tmp = element;
 	element = [[UIAccessibilityElement alloc] initWithAccessibilityContainer:inVew];
 	element.accessibilityTraits = UIAccessibilityTraitButton;
 }
@@ -56,6 +55,5 @@
 
 @synthesize title;
 @synthesize element;
-
 
 @end

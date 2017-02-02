@@ -22,6 +22,7 @@
 		CGPathAddArcToPoint(path, NULL, x, y, x, (CGFloat)(y + 20.0), 10.0);
 	}
 	spot = [[ZBLayoutLayer alloc] init];
+	spot.contentsScale = [UIScreen mainScreen].scale;
 	spot.bounds = CGRectMake(0.0, 0.0, 30.0, 30.0);
 	spot.color = [UIColor redColor];
 	[self.layer addSublayer:spot];
