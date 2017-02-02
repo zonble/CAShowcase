@@ -1,6 +1,12 @@
 #import "ZBGridImageViewController.h"
 
 @implementation ZBGridImageViewController
+{
+	id <ZBGridImageViewControllerDelegate> __weak delegate;
+	UIImageView *imageView;
+	UIImage *image;
+	UILabel *label;
+}
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {

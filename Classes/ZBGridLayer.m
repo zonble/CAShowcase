@@ -1,6 +1,12 @@
 #import "ZBGridLayer.h"
 
 @implementation ZBGridLayer
+{
+	UIImage *image;
+	NSString *title;
+	UIAccessibilityElement *element;
+	UIView *view;
+}
 
 - (instancetype)init
 {

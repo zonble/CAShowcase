@@ -11,10 +11,6 @@
 
 @implementation RootViewController
 
-- (void)viewDidUnload 
-{
-}
-
 #pragma mark -
 #pragma mark Memory management
 

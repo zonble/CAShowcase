@@ -1,6 +1,9 @@
 #import "ZBAnimateTableViewController.h"
 
 @implementation ZBAnimateTableViewController
+{
+	CALayer *transitionLayer;
+}
 
 - (void)removeOutletsAndControls_ZBAnimateTableViewController
 {
@@ -9,11 +12,6 @@
 
 - (void)dealloc 
 {
-	[self removeOutletsAndControls_ZBAnimateTableViewController];
-}
-- (void)viewDidUnload
-{
-	[super viewDidUnload];
 	[self removeOutletsAndControls_ZBAnimateTableViewController];
 }
 

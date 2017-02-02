@@ -6,10 +6,10 @@
 - (void)tap:(UIGestureRecognizer *)r
 {
 	CGPoint location = [r locationInView:self];
-	CGFloat hue = [NSDate timeIntervalSinceReferenceDate] - floor([NSDate timeIntervalSinceReferenceDate]);
+	CGFloat hue = (CGFloat)([NSDate timeIntervalSinceReferenceDate] - floor([NSDate timeIntervalSinceReferenceDate]));
 	ZBFireworkLayer *aLayer = [[ZBFireworkLayer alloc] initWithHue:hue];
-	CGPoint from = CGPointMake(location.x, self.bounds.size.height - 50.0);
-	CGPoint to = CGPointMake(location.x, (self.bounds.size.height - 100.0) * (random() % 100 / (CGFloat)100));
+	CGPoint from = CGPointMake(location.x, (CGFloat)(self.bounds.size.height - 50.0));
+	CGPoint to = CGPointMake(location.x, (CGFloat)((self.bounds.size.height - 100.0) * (random() % 100 / (CGFloat)100)));
 	[aLayer animateInLayer:self.layer from:from to:to];
 }
 
@@ -44,10 +44,9 @@
 	[[UIImage imageNamed:@"stars.jpg"] drawInRect:self.bounds];
 
 	NSString *msg = @"Tap to fire!";
-	CGRect textFrame = CGRectMake(10.0, 20.0, self.bounds.size.width - 20.0, 30.0);
+	CGRect textFrame = CGRectMake(10.0, 20.0, (CGFloat)(self.bounds.size.width - 20.0), 30.0);
 	[[UIColor whiteColor] set];
 	[msg drawInRect:textFrame withFont:[UIFont boldSystemFontOfSize:18.0] lineBreakMode:UILineBreakModeTailTruncation alignment:UITextAlignmentCenter];
-
 }
 
 - (BOOL)isAccessibilityElement

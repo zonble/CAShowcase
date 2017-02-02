@@ -2,7 +2,6 @@
 #import "ZBLayoutLayer.h"
 
 @interface ZBFireworkLayer : CALayer
-
 - (instancetype)initWithHue:(CGFloat)inHue NS_DESIGNATED_INITIALIZER;
 - (void)animateInLayer:(CALayer *)inSuperlayer from:(CGPoint)inFrom to:(CGPoint)inTo;
 @end

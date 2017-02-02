@@ -1,6 +1,10 @@
 #import "ZBPathView.h"
 
 @implementation ZBPathView
+{
+	ZBLayoutLayer *spot;
+	CGMutablePathRef path;
+}
 
 - (void)dealloc
 {
@@ -13,10 +17,9 @@
 	path = CGPathCreateMutable();
 	CGPathMoveToPoint(path, NULL, 20.0, 40.0);
 	for (NSUInteger i = 0; i < 10; i++) {
-		CGFloat x = (i % 2) ? 20.0 : self.bounds.size.width - 20.0;
-		CGFloat y = 40.0 + 30.0 * (i + 1);
-//		CGPathAddLineToPoint(path, NULL, x, y);
-		CGPathAddArcToPoint(path, NULL, x, y, x, y + 20.0, 10.0);
+		CGFloat x = (CGFloat)((i % 2) ? 20.0 : self.bounds.size.width - 20.0);
+		CGFloat y = (CGFloat)(40.0 + 30.0 * (i + 1));
+		CGPathAddArcToPoint(path, NULL, x, y, x, (CGFloat)(y + 20.0), 10.0);
 	}
 	spot = [[ZBLayoutLayer alloc] init];
 	spot.bounds = CGRectMake(0.0, 0.0, 30.0, 30.0);
@@ -63,6 +66,5 @@
 	CGContextStrokePath(ctx);
 	CGColorSpaceRelease(rgbColor);
 }
-
 
 @end

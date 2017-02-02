@@ -76,7 +76,7 @@
 	return image;
 }
 
-- (void)gridContol:(ZBGridControl *)inControl didSelectItemAtIndex:(NSUInteger)inIndex withLayer:(CALayer *)inLayer;
+- (void)gridControl:(ZBGridControl *)inControl didSelectItemAtIndex:(NSUInteger)inIndex withLayer:(CALayer *)inLayer;
 {
 	UIImage *image = [UIImage imageNamed:images[inIndex]];
 	imageViewController.image = image;

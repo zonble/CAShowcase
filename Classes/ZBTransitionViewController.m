@@ -5,6 +5,19 @@
 @end
 
 @implementation ZBTransitionViewController
+{
+	UIView *imageView;
+	UIButton *doAnimationButton;
+	UIButton *selectTypeButton;
+	UIButton *selectSubtypeButton;
+
+	NSUInteger imageIndex;
+	NSArray *images;
+	ZBTransitionTypeController *typeController;
+	ZBTransitionSubtypeController *subtypeController;
+	ZBTransitionSettingsTableViewController *settingController;
+	UINavigationController *settingNavController;
+}
 
 - (void)removeOutletsAndControls_ZBTransitionViewController
 {
@@ -12,12 +25,6 @@
 	self.doAnimationButton = nil;
 	self.selectTypeButton = nil;
 	self.selectSubtypeButton = nil;
-}
-
-- (void)viewDidUnload
-{
-	[super viewDidUnload];
-	[self removeOutletsAndControls_ZBTransitionViewController];
 }
 
 - (void)dealloc 

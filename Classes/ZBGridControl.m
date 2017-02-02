@@ -6,6 +6,11 @@ static CGFloat const itemHeight = 80.0;
 static CGFloat const itemWidth = 80.0;
 
 @implementation ZBGridControl
+{
+	id <ZBGridControlDelegate> dataSource;
+	NSMutableArray *layers;
+	NSUInteger selectedIndex;
+}
 
 
 - (void)tap:(UITapGestureRecognizer *)r
@@ -20,7 +25,7 @@ static CGFloat const itemWidth = 80.0;
 		if (CGRectContainsPoint(aLayer.frame, location)) {
 			selectedIndex = index;
 			[self scrollRectToVisible:CGRectMake(aLayer.frame.origin.x - 10.0, aLayer.frame.origin.y - 10.0, aLayer.frame.size.width + 20.0, aLayer.frame.size.height + 20.0) animated:YES];
-			[dataSource gridContol:self didSelectItemAtIndex:index withLayer:aLayer];
+			[dataSource gridControl:self didSelectItemAtIndex:index withLayer:aLayer];
 			break;
 		}
 		index++;

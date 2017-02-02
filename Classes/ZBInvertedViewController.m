@@ -2,6 +2,12 @@
 #import "UIView+Screenshot.h"
 
 @implementation ZBInvertedViewController
+{
+	UIScrollView *scrollView;
+	UIView *contentView;
+	CALayer *invertedImageLayer;
+	CALayer *clipLayer;
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -49,14 +55,6 @@
 
 	UIImage *screenshot = [contentView invertedScreenshot];
 	invertedImageLayer.contents = (id)screenshot.CGImage;
-//	clipLayer.borderWidth = 2.0;
-}
-
-- (void)viewDidUnload
-{
-	[super viewDidUnload];
-	self.scrollView = nil;
-	self.contentView = nil;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)inScrollView

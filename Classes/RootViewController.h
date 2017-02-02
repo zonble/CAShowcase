@@ -1,5 +1,3 @@
 @interface RootViewController : UITableViewController 
-{
-}
 
 @end

@@ -6,18 +6,12 @@
 @required
 - (NSUInteger)numberOfItemsInGridControl:(ZBGridControl *)inControl;
 - (UIImage *)imageForItemInGridControl:(ZBGridControl *)inControl atIndex:(NSUInteger)inIndex;
-- (void)gridContol:(ZBGridControl *)inControl didSelectItemAtIndex:(NSUInteger)inIndex withLayer:(CALayer *)inLayer;
+- (void)gridControl:(ZBGridControl *)inControl didSelectItemAtIndex:(NSUInteger)inIndex withLayer:(CALayer *)inLayer;
 @end
 
 @interface ZBGridControl : UIScrollView
-{
-	id <ZBGridControlDelegate> dataSource;
-	NSMutableArray *layers;
-	NSUInteger selectedIndex;
-}
 
 - (void)reloadData;
-
 - (void)resetSelection;
 
 @property (weak, nonatomic) id <ZBGridControlDelegate> dataSource;

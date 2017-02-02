@@ -1,5 +1,8 @@
 #import "ZBFireworkLayer.h"
 
+@interface ZBFireworkLayer () <CAAnimationDelegate>
+@end
+
 @implementation ZBFireworkLayer
 
 - (instancetype)initWithHue:(CGFloat)inHue
@@ -26,11 +29,11 @@
 			count = 1;
 		}
 		NSUInteger index = 0;
-		CGFloat radius = 300.0 * (random() % 100 / 100.0);
+		CGFloat radius = (CGFloat)(300.0 * (random() % 100 / 100.0));
 		for (ZBLayoutLayer *aLayer in self.sublayers) {
-			CGFloat r = M_PI * 2 / (CGFloat)count * (CGFloat)index;
-			CGFloat x = cos(r) * radius;
-			CGFloat y = sin(r) * radius;
+			CGFloat r = (CGFloat)(M_PI * 2 / (CGFloat)count * (CGFloat)index);
+			CGFloat x = (CGFloat)(cos(r) * radius);
+			CGFloat y = (CGFloat)(sin(r) * radius);
 			CABasicAnimation *positionAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
 			positionAnimation.fromValue = [NSValue valueWithCGPoint:aLayer.position];
 			positionAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(x, y)];
@@ -72,7 +75,6 @@
 
 	[self addAnimation:animation forKey:@"move"];
 }
-
 
 @end
 

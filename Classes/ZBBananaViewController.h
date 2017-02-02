@@ -2,6 +2,5 @@
 
 @interface ZBBananaViewController : UIViewController
 - (void)move;
-
 @end
 

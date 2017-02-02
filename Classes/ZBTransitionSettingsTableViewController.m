@@ -12,11 +12,6 @@
 {
 	[self removeOutletsAndControls_ZBTransitionSettingsTableViewController];
 }
-- (void)viewDidUnload
-{
-	[super viewDidUnload];
-	[self removeOutletsAndControls_ZBTransitionSettingsTableViewController];
-}
 
 #pragma mark -
 #pragma mark UIViewContoller Methods

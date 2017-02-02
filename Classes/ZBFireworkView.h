@@ -1,2 +1,2 @@
-@interface ZBFireworkView : UIView 
+@interface ZBFireworkView : UIView
 @end

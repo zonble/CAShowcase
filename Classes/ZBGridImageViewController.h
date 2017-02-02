@@ -3,18 +3,10 @@
 @class ZBGridImageViewController;
 
 @protocol ZBGridImageViewControllerDelegate <NSObject>
-
 - (void)imageViewControllerDidClose:(ZBGridImageViewController *)inController;
-
 @end
 
 @interface ZBGridImageViewController : UIViewController
-{
-	id <ZBGridImageViewControllerDelegate> __weak delegate;
-	UIImageView *imageView;
-	UIImage *image;
-	UILabel *label;
-}
 
 - (IBAction)close:(id)sender;
 
