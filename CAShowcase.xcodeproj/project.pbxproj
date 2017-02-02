@@ -43,6 +43,7 @@
 		D447B249133A75D6007CB4EC /* ZBLayoutLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D447B248133A75D6007CB4EC /* ZBLayoutLayer.m */; };
 		D447B319133A80EA007CB4EC /* ZBAnimateTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D447B318133A80EA007CB4EC /* ZBAnimateTableViewController.m */; };
 		D447B445133A8F33007CB4EC /* ZBTransitionSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D447B444133A8F33007CB4EC /* ZBTransitionSettingsTableViewController.m */; };
+		D4D3BC001E43A98F0075BADE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D3BBFF1E43A98F0075BADE /* LaunchScreen.storyboard */; };
 		D4F3E093133AF0310074E744 /* ZBFireworkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F3E092133AF0310074E744 /* ZBFireworkViewController.m */; };
 		D4F3E09F133AF0A30074E744 /* ZBFireworkView.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F3E09E133AF0A30074E744 /* ZBFireworkView.m */; };
 		D4F3E0AC133AF1830074E744 /* ZBFireworkLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D4F3E0AB133AF1830074E744 /* ZBFireworkLayer.m */; };
@@ -110,6 +111,7 @@
 		D447B318133A80EA007CB4EC /* ZBAnimateTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBAnimateTableViewController.m; sourceTree = "<group>"; };
 		D447B443133A8F33007CB4EC /* ZBTransitionSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBTransitionSettingsTableViewController.h; sourceTree = "<group>"; };
 		D447B444133A8F33007CB4EC /* ZBTransitionSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBTransitionSettingsTableViewController.m; sourceTree = "<group>"; };
+		D4D3BBFF1E43A98F0075BADE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4F3E091133AF0310074E744 /* ZBFireworkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBFireworkViewController.h; sourceTree = "<group>"; };
 		D4F3E092133AF0310074E744 /* ZBFireworkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZBFireworkViewController.m; sourceTree = "<group>"; };
 		D4F3E09D133AF0A30074E744 /* ZBFireworkView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBFireworkView.h; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				D4D3BBFF1E43A98F0075BADE /* LaunchScreen.storyboard */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
@@ -421,6 +424,7 @@
 				D447B0A7133A5F71007CB4EC /* banana7.tiff in Resources */,
 				D447B0A8133A5F71007CB4EC /* banana8.tiff in Resources */,
 				D447B14A133A696F007CB4EC /* bike1.jpg in Resources */,
+				D4D3BC001E43A98F0075BADE /* LaunchScreen.storyboard in Resources */,
 				D447B14B133A696F007CB4EC /* bike2.jpg in Resources */,
 				D447B14C133A696F007CB4EC /* bike3.jpg in Resources */,
 				D447B14D133A696F007CB4EC /* bike4.jpg in Resources */,
@@ -485,6 +489,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = X29ZB2LBKB;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -501,6 +506,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = X29ZB2LBKB;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = CAShowcase_Prefix.pch;
 				INFOPLIST_FILE = "CAShowcase-Info.plist";
