@@ -1,0 +1,4 @@
+language: objective-c
+osx_image: xcode9.2
+script:
+  - xcodebuild -scheme CAShowcase -destination 'platform=iOS Simulator,name=iPhone 7,OS=11.3'
