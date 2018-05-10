@@ -42,7 +42,7 @@
 		clipLayer.contentsScale = [UIScreen mainScreen].scale;
 		[self.view.layer addSublayer:clipLayer];
 	}
-	clipLayer.frame = CGRectMake(0.0, 100.0, 320.0, 80.0);
+	clipLayer.frame = CGRectMake(0.0, 100.0, scrollView.bounds.size.width, 80.0);
 	clipLayer.masksToBounds = YES;
 	[clipLayer addSublayer:invertedImageLayer];
 
